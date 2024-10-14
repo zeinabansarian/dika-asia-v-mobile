@@ -737,6 +737,14 @@ video {
   margin-top: 0.5rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1828,6 +1836,11 @@ video {
   background-color: rgb(209 209 209 / var(--tw-bg-opacity));
 }
 
+.bg-blackTxt {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 28 28 / var(--tw-bg-opacity));
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -1957,6 +1970,10 @@ video {
   padding-right: 1.25rem;
 }
 
+.pt-28 {
+  padding-top: 7rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2042,6 +2059,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
@@ -2627,6 +2649,16 @@ a {
 .after\:bg-\[\#1C1C1C80\]::after {
   content: var(--tw-content);
   background-color: #1C1C1C80;
+}
+
+.after\:bg-blackTxt\/\[50\]::after {
+  content: var(--tw-content);
+  background-color: rgb(28 28 28 / 50);
+}
+
+.after\:bg-blackTxt\/\[0\.5\]::after {
+  content: var(--tw-content);
+  background-color: rgb(28 28 28 / 0.5);
 }
 
 .after\:bg-gradient-to-t::after {
