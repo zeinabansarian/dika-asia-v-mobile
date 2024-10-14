@@ -150,15 +150,21 @@ header .toggle-inner.openMenu .Toggle:nth-child(3){
   -ms-transform: rotate(51deg);
   -o-transform: rotate(51deg);
 }
-main.Home .Section-1 .swiper-pagination{
-  width: 95%;
-  margin-right: auto;
+main.Home-Mobile .Section-1 .swiper-pagination{
+  width: 88%;
+  position: absolute;
+  bottom: 0;
+  top: unset;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
   justify-content: flex-start;
   align-items: center;
   gap: 1.8em;
   margin-bottom: 2em;
+
   }
   main.Home-Mobile .Section-1 .swiper-pagination-bullet{
      width: 100%;
@@ -182,9 +188,9 @@ main.Home .Section-1 .swiper-pagination{
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 35px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
   color: #F6F6F6;
   }
   main.Home-Mobile .Section-1 .swiper-pagination-bullet .line{
@@ -297,7 +303,11 @@ main.Home .Section-1 .swiper-pagination{
   }
   
   main.Product-Show .swiper-button-prev,
-  main.Product-Show .swiper-button-next{
+  main.Product-Show .swiper-button-next,
+ main.Home-Mobile .Procats .swiper-button-next,
+ main.Home-Mobile .Procats .swiper-button-prev,
+ main.Home-Mobile .Section-4 .swiper-button-next,
+ main.Home-Mobile .Section-4 .swiper-button-prev{
   position: static;
   margin: 0;
   height: auto;
@@ -306,26 +316,44 @@ main.Home .Section-1 .swiper-pagination{
   main.Product-Show .swiper-button-prev::before,
   main.Product-Show .swiper-button-prev::after,
   main.Product-Show .swiper-button-next::before,
-  main.Product-Show .swiper-button-next::after{
+  main.Product-Show .swiper-button-next::after,
+  .Procats .swiper-button-next::before,
+  .Procats .swiper-button-prev::before,
+  .Procats .swiper-button-next::after,
+  .Procats .swiper-button-prev::after,
+  main.Home-Mobile .Section-4 .swiper-button-next::before,
+  main.Home-Mobile .Section-4 .swiper-button-next::after,
+  main.Home-Mobile .Section-4 .swiper-button-prev::before,
+  main.Home-Mobile .Section-4 .swiper-button-prev::after{
   content: '';
   }
   main.Product-Show .swiper-button-prev svg,
-  main.Product-Show .swiper-button-next svg{
+  main.Product-Show .swiper-button-next svg,
+  main.Home-Mobile .Procats .swiper-button-prev svg,
+  main.Home-Mobile .Procats .swiper-button-next svg,
+  main.Home-Mobile .Section-4 .swiper-button-prev svg,
+  main.Home-Mobile .Section-4 .swiper-button-next svg{
     width: auto;
     height: auto;
   }
-  main.Product-Show .swiper-pagination{
+  main.Product-Show .swiper-pagination,
+  main.Home-Mobile .Procats .swiper-pagination,
+  main.Home-Mobile .Section-4 .swiper-pagination{
     width: auto;
     margin: 0 .3em;
     display: flex;
     gap: .5em;
     position: static;
   }
-  main.Product-Show .swiper-pagination .swiper-pagination-bullet{
+  main.Product-Show .swiper-pagination .swiper-pagination-bullet,
+  .Procats .swiper-pagination .swiper-pagination-bullet{
   background-color: #888888 !important;
   opacity: 1 !important;
+  width: 12px;
+  height: 12px;
   }
-  main.Product-Show .swiper-pagination .swiper-pagination-bullet-active{
+  main.Product-Show .swiper-pagination .swiper-pagination-bullet-active,
+  .Procats .swiper-pagination .swiper-pagination-bullet-active{
     background-color: #E33026 !important;
   }
   #inputHeader{
@@ -377,3 +405,14 @@ font-weight: 700;
 line-height: 35px;
 color: #454545;
   }
+  .Procats .swiper-slide-active .ProCat{
+height: 130%;
+  }
+  main.Home-Mobile .Section-4 .swiper-slide-active p{
+    opacity: 1;
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+}

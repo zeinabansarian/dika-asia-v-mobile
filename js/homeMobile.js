@@ -101,8 +101,23 @@ Sec3.style.backgroundImage = `url('${bgSec}')`
 
 // procat slider
 let SwiperProcat= new Swiper ('.swiper-procats', {
-    slidesPerView: 5,
+    slidesPerView: 1.8,
     spaceBetween: 5,
+    loop:true,
+    centeredSlides: true,
+    pagination: {
+        el: '.Procats .swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function (index, className) {
+        return '<span class="' + className + '">'+ '</span>';
+    
+        }
+    },
+    navigation: {
+        nextEl: ".Procats .swiper-button-next",
+        prevEl: ".Procats .swiper-button-prev",
+      }
 })
 let gridItems = document.querySelectorAll('.GridItem')
 let Banners =[...document.querySelectorAll('.Section-3 .imgBanner')] 
@@ -132,30 +147,16 @@ gridItems.forEach(grid=>{
 })
 
 
-
-let gridItemsProj = document.querySelectorAll('.Section-4 .Proj')
-let BannersProj =[...document.querySelectorAll('.Section-4 .imgBanner')] 
-let bannerimgProj
-gridItemsProj.forEach(grid=>{
-    let img
-    for(let i =0 ; i< gridItemsProj.length ; i++){
-        BannersProj[i].setAttribute('data-index',i)
-        gridItemsProj[i].setAttribute('data-index',i)
-    }
-    grid.addEventListener('mouseenter',(event)=>{
-     img = event.currentTarget.getAttribute('data-IMG')
-     let bannerimgProj 
-     let bannerSrc
-    for(let h = 0 ; h < gridItemsProj.length ; h++){
-        if( event.currentTarget.getAttribute('data-index') == BannersProj[h].getAttribute('data-index') ){
-            console.log(BannersProj[h]);
-            bannerimgProj = BannersProj[h]
-            bannerSrc = BannersProj[h].getAttribute('src')
-        }
-    }
-    BannersProj.map(banner=>{
-        banner.classList.remove('show')
-    })
-    bannerimgProj.classList.add('show')
-    })
+let SwiperProject= new Swiper ('.swiper-Project ', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect:'fade' ,
+    fadeEffect: {
+      crossFade: true,
+    },
+   speed:2000,
+    navigation: {
+        nextEl: ".Section-4 .swiper-button-next",
+        prevEl: ".Section-4 .swiper-button-prev",
+      }
 })
