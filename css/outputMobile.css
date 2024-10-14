@@ -819,6 +819,10 @@ video {
   margin-bottom: 2em;
 }
 
+.mb-\[4em\] {
+  margin-bottom: 4em;
+}
+
 .mb-\[5em\] {
   margin-bottom: 5em;
 }
@@ -893,10 +897,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mb-\[4em\] {
-  margin-bottom: 4em;
 }
 
 .mt-\[10em\] {
@@ -1026,6 +1026,10 @@ video {
   height: 20px;
 }
 
+.h-\[289px\] {
+  height: 289px;
+}
+
 .h-\[2px\] {
   height: 2px;
 }
@@ -1072,10 +1076,6 @@ video {
 
 .h-\[180px\] {
   height: 180px;
-}
-
-.h-\[289px\] {
-  height: 289px;
 }
 
 .h-\[85vh\] {
@@ -3144,6 +3144,10 @@ video {
   transition-duration: 200ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .duration-700 {
   transition-duration: 700ms;
 }
@@ -3158,10 +3162,6 @@ video {
 
 .duration-\[\.8s\] {
   transition-duration: .8s;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
 }
 
 .ease-in {
@@ -3931,6 +3931,10 @@ main.Home-Mobile .Section-4 .swiper-slide-active p{
   color: rgb(28 28 28 / var(--tw-text-opacity));
 }
 
+.group.toggle .group-\[\&\.toggle\]\:left-\[-100\%\] {
+  left: -100%;
+}
+
 .group\/tab.active .group-\[\&\.active\]\/tab\:w-full {
   width: 100%;
 }
@@ -3961,6 +3965,10 @@ main.Home-Mobile .Section-4 .swiper-slide-active p{
 .group\/tab.active .group-\[\&\.active\]\/tab\:text-blackTxt {
   --tw-text-opacity: 1;
   color: rgb(28 28 28 / var(--tw-text-opacity));
+}
+
+.group.toggle .group-\[\&\.toggle\]\:opacity-0 {
+  opacity: 0;
 }
 
 @media (min-width: 480px) {
