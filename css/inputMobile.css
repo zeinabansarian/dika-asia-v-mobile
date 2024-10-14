@@ -2,40 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: "YekanBakh700";
+  src: url("../_fonts/YekanBakh-Heavy.eot");
+  src: url("../_fonts/YekanBakh-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/YekanBakh-Heavy.woff") format("woff"),
+    url("../_fonts/YekanBakh-Heavy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-    font-family: "YekanBakh700";
-    src: url("../_fonts/YekanBakh-Heavy.eot");
-    src: url("../_fonts/YekanBakh-Heavy.eot?#iefix")
-        format("embedded-opentype"),
-      url("../_fonts/YekanBakh-Heavy.woff") format("woff"),
-      url("../_fonts/YekanBakh-Heavy.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: "YekanBakh400";
+  src: url("../_fonts/YekanBakh-Regular.eot");
+  src: url("../_fonts/YekanBakh-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/YekanBakh-Regular.woff") format("woff"),
+    url("../_fonts/YekanBakh-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-@font-face {
-    font-family: "YekanBakh400";
-    src: url("../_fonts/YekanBakh-Regular.eot");
-    src: url("../_fonts/YekanBakh-Regular.eot?#iefix")
-        format("embedded-opentype"),
-      url("../_fonts/YekanBakh-Regular.woff") format("woff"),
-      url("../_fonts/YekanBakh-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+* {
+  font-family: "YekanBakh400";
+  direction: rtl;
+}
 
-
-  *{
-    font-family: "YekanBakh400";
-    direction: rtl;
-  }
-
-
-  h1,
+h1,
 h2 {
   font-size: 24px;
   line-height: 23px;
@@ -57,4 +51,38 @@ a {
   font-size: 14px;
   line-height: 21.91px;
   text-decoration: none;
+}
+
+.articleShow .commentP .nameInput::after,
+.articleShow .commentP .emailInput::after,
+.articleShow .commentP .msgInput::after {
+  content: "*";
+  position: absolute;
+  top: 13px;
+  color: #f00;
+}
+.articleShow .commentP .nameInput::after{
+right: 124px;
+}
+.articleShow .commentP .emailInput::after{
+  right: 53px;
+}
+
+.articleShow .commentP .msgInput::after{
+  right: 83px;
+  top: 16px;
+}
+.articleShow .commentP input::placeholder,
+.articleShow .commentP textarea::placeholder {
+  color: #5d5d5d;
+  font-family: "YekanBakh400";
+  font-size: 16px;
+  line-height: 28px;
+  text-align: right;
+}
+.articleShow .commentP input,
+.articleShow .commentP textarea {
+  background-color: transparent;
+  direction: rtl;
+  position: relative;
 }
