@@ -42,3 +42,7 @@ $('.section1').imagesLoaded( function() {
    spaceBetween: 20,
    
   });
+
+
+
+  
