@@ -6,10 +6,10 @@
    </basis>
 
 
-   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="2362065"> <member name="m-relatedProject" type="list" blgid="629" size="320x240"/> </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="2362065"> <member name="m-relatedProduct" type="list" blgid="630" size="260x200"/> </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="2362065"> <member name="project" type="view"/> </basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="2362065"> <member name="projectGallery" type="list" format="4"/> </basis>	
+   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member name="m-relatedProject" type="list" blgid="629" size="320x240"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member name="m-relatedProduct" type="list" blgid="630" size="260x200"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member name="project" type="view"/> </basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> <member name="projectGallery" type="list" format="4"/> </basis>	
 
 <!DOCTYPE html>
 <html lang="fa">
@@ -29,7 +29,7 @@
 
 <body>
     <div class="project bg-bgGray">
-        <section class="section1 pt-20 relative">
+        <section class="section1 pt-20 relative" style="min-height: 80vh;">
             <basis core="print" datamembername="db.projectGallery">
              
                 <face filter="ord=51">
@@ -219,7 +219,7 @@
                 <div class="swiper-slide">
                   <a class="flex items-center" href="/@link" title="@title">
     
-                      <div class="imgS w-full relative after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-r after:from-[#1c1c1c21] after:to-#1C1C1C00">
+                      <div class="imgS w-full relative after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-r after:from-[#1c1c1cd9] after:to-#1C1C1C00">
                           <img class="w-full" src="/@00260X00200prp" alt="@title" title="@title">
                       </div>
     

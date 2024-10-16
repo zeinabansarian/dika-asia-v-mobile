@@ -30,7 +30,7 @@ $('.section1').imagesLoaded( function() {
   const relProject = new Swiper('.relProject', {
    speed:1000,
    slidesPerView:1,
-   loop:true,
+   loop:false,
    spaceBetween: 40,
    centeredSlides:true,
   });
