@@ -100,3 +100,20 @@ right: 124px;
 .viewPagination .swiper-pagination-bullet-active{
   background-color: #E33026;
 }
+
+
+.loaded {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+
+.project .projectGalleryBox:nth-child(3) ~ .projectGalleryBox {
+  display: none;
+}
+.aboutUs .projectGalleryBox:nth-child(3) ~ .projectGalleryBox {
+  display: none;
+}

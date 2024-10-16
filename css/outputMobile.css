@@ -653,6 +653,10 @@ video {
   inset: -0.25rem;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -2516,10 +2520,6 @@ video {
   line-height: 2rem;
 }
 
-.text-\[32px\] {
-  font-size: 32px;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3151,6 +3151,22 @@ a {
 
 .viewPagination .swiper-pagination-bullet-active{
   background-color: #E33026;
+}
+
+.loaded {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+.project .projectGalleryBox:nth-child(3) ~ .projectGalleryBox {
+  display: none;
+}
+
+.aboutUs .projectGalleryBox:nth-child(3) ~ .projectGalleryBox {
+  display: none;
 }
 
 @media (min-width: 480px) {
