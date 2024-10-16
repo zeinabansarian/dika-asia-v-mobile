@@ -1,0 +1,416 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2361953"> 
+    <member name="default" type="view" postsql="select * from [db.default] where TypeID=250"/> 
+</basis> 
+
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2361953">
+     <member name="image1" type="list" format="4" postsql="select * from [db.image1] where ord=51"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2361953">
+    <member name="image2" type="list" format="4" postsql="select * from [db.image2] where ord=52"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2361953">
+    <member name="image3" type="list" format="4" postsql="select * from [db.image3] where ord=53"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2361953">
+    <member name="banners" type="list" format="4" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="productCat" parentid="210198" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210204"> 
+    <member name="list" size="360x429" type="list"/> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" > 
+   <member request="cat" type="tree" name="projectCat" parentid="210214" /> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دیکاآسیا</title>
+    <meta name="description" content="دیکاآسیا">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputMobile.css">
+</head>
+<body>
+    <main class="Home-Mobile overflow-hidden" dir="rtl">
+        <div class="Loading-Container w-full h-screen fixed top-0 left-0
+        z-[999999] bg-Woodsmoke/50 flex justify-center items-center">
+        <video  class="lazy" id="loadVideo"
+        autoplay muted loop playsinline width="100%" height="100%"
+         loop class="w-full h-full object-cover" >
+         <source data-src="[##cms.cms.cdn##]/images/loading.mp4" type="video/mp4">
+        </video>
+       </div>
+       <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="Section-1 w-full h-[100svh] flex">
+            <div class="Banner-Slider w-full h-full flex">
+                <div class="swiper-banner w-full h-full flex">
+                    <div class="swiper-wrapper w-full h-full">
+                        <basis core="print" datamembername="db.default">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=1">
+                        <div class="swiper-slide relative w-full h-full flex flex-col">
+                            <div class="IMG w-full h-full">
+                                <img src="[##db.image1.largeIMG##]" alt="@text" title="@text" class="w-full h-full object-cover">
+                            </div>
+                            <div class="OV absolute gap-3 left-0 top-0 justify-center items-start z-1 w-full h-full flex flex-col">
+                                <div class="Title mr-[4%] flex justify-start items-start">
+                                    <h1 class="font-YekanBakh700 font-bold text-2xl 
+                                    leading-41 text-Woodsmoke/50">
+                                    @text
+                                    </h1>
+                                </div>
+                                <div class="Text mr-[4%] flex justify-start items-start">
+                                    <p class="font-YekanBakh400 font-normal text-lg leading-32 text-Woodsmoke/50">
+                                        @largetext
+                                    </p>
+                                </div>
+                                <a href="محصولات" alt="محصولات" title="محصولات" class="mt-[1em] Btn-Show mr-[4%] w-max border-[1px] border-Woodsmoke/50 bg-Woodsmoke600
+                                py-[.5em] px-[1.2em] flex justify-center items-center text-Woodsmoke/50
+                                font-YekanBakh400 font-normal text-sm leading-24 rounded-[5px]">
+                                    محصولات
+                                </a>
+                            </div>
+                        </div>
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.default">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=1">
+                        <div class="swiper-slide relative w-full h-full flex flex-col">
+                            <div class="IMG w-full h-full">
+                                <img src="[##db.image2.largeIMG##]" alt="@text" title="@text" class="w-full h-full object-cover">
+                            </div>
+                            <div class="OV absolute gap-3 left-0 top-0 justify-center items-start z-1 w-full h-full flex flex-col">
+                                <div class="Title mr-[4%] flex justify-start items-start">
+                                    <h1 class="font-YekanBakh700 font-bold text-2xl 
+                                    leading-41 text-Woodsmoke/50">
+                                    @text
+                                    </h1>
+                                </div>
+                                <div class="Text mr-[4%] flex justify-start items-start">
+                                    <p class="font-YekanBakh400 font-normal text-lg leading-32 text-Woodsmoke/50">
+                                        @largetext
+                                    </p>
+                                </div>
+                                <a href="محصولات" alt="محصولات" title="محصولات" class="mt-[1em] Btn-Show mr-[4%] w-max border-[1px] border-Woodsmoke/50 bg-Woodsmoke600
+                                py-[.5em] px-[1.2em] flex justify-center items-center text-Woodsmoke/50
+                                font-YekanBakh400 font-normal text-sm leading-24 rounded-[5px]">
+                                    محصولات
+                                </a>
+                            </div>
+                        </div>
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.default">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=1">
+                        <div class="swiper-slide relative w-full h-full flex flex-col">
+                            <div class="IMG w-full h-full">
+                                <img src="[##db.image3.largeIMG##]" alt="@text" title="@text" class="w-full h-full object-cover">
+                            </div>
+                            <div class="OV absolute gap-3 left-0 top-0 justify-center items-start z-1 w-full h-full flex flex-col">
+                                <div class="Title mr-[4%] flex justify-start items-start">
+                                    <h1 class="font-YekanBakh700 font-bold text-2xl 
+                                    leading-41 text-Woodsmoke/50">
+                                    @text
+                                    </h1>
+                                </div>
+                                <div class="Text mr-[4%] flex justify-start items-start">
+                                    <p class="font-YekanBakh400 font-normal text-lg leading-32 text-Woodsmoke/50">
+                                        @largetext
+                                    </p>
+                                </div>
+                                <a href="محصولات" alt="محصولات" title="محصولات" class="mt-[1em] Btn-Show 
+                                mr-[4%] w-max border-[1px] border-Woodsmoke/50 bg-Woodsmoke600
+                                py-[.5em] px-[1.2em] flex justify-center items-center text-Woodsmoke/50
+                                font-YekanBakh400 font-normal text-sm leading-24 rounded-[5px]">
+                                    محصولات
+                                </a>
+                            </div>
+                        </div>
+                            </face>
+                        </basis>
+                    </div>
+                   
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="paging hidden">
+                <basis core="print" datamembername="db.banners">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord in (1,2,3)">
+                        <p>
+                           @name
+                        </p>
+                    </face>
+                </basis>  
+            </div>
+        </section>
+       <section class="Section-2 w-full flex justify-center items-center bg-Woodsmoke50 overflow-hidden">
+        <div class="Parallax-Container w-full flex flex-col justify-center items-center">
+            <div class="Right-IMG w-full flex  justify-between items-start h-[200px]">
+                <basis core="print" datamembername="db.banners">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord = 54">
+                <div class="IMG w-[40%] ml-auto flex justify-start items-start  h-[200px]">
+                    <img src="@largeIMG" alt="DikaAsiya" title="DikaAsiya" class="translate-y-[25%] w-full object-cover h-[135px] parallax-1
+                    duration-100">
+                </div>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.banners">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord = 55">
+                <div class="IMG w-[40%] mr-auto flex justify-start items-start h-[200px]">
+                    <img src="@largeIMG" alt="DikaAsiya" title="DikaAsiya" class="w-full h-[135px]
+                     object-cover parallax-2 duration-100">
+                </div>
+                    </face>
+                </basis>
+            </div>
+            <div class="Middle w-[90%] mx-auto flex flex-col justify-center items-center gap-3 my-auto">
+                <basis core="print" datamembername="db.default">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="RowNumber=2">
+                <div class="Title w-full flex justify-center items-center">
+                    <h2 class="w-auto text-center font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        @text
+                        <span class="color font-YekanBakh700 font-bold text-2xl leading-41 text-punch600">دیکا آسیا</span>
+                    </h2>
+                </div>
+                 
+                <div class="Text w-full flex justify-center items-cente flex-col">
+                    <p class="w-auto text-center font-YekanBakh400 font-normal text-xl leading-32 text-blackTxt">
+                        @largetext
+                    </p>
+                </div>
+                <a href="درباره-ما" alt="درباره‌ی‌ما" title="درباره‌ی‌ما" class="mt-[1em] Btn-Show mr-[4%] w-max border-[1px] border-Woodsmoke/50 bg-Woodsmoke600
+                py-[.5em] px-[1.2em] flex justify-center items-center text-Woodsmoke/50
+                font-YekanBakh400 font-normal text-sm leading-24 rounded-[5px]">
+                   درباره‌ی ما
+                </a>  
+             </face>
+                </basis>
+            </div>
+            <div class="Left-IMG w-full flex  justify-between items-start h-[200px]">
+                <basis core="print" datamembername="db.banners">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord = 56">
+                <div class="IMG w-[40%] ml-auto flex justify-start items-end  h-[200px]">
+                    <img src="@largeIMG" alt="DikaAsiya" title="DikaAsiya" class="translate-y-[-25%] w-full object-cover h-[135px] parallax-1
+                    duration-100">
+                </div>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.banners">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord = 57">
+                <div class="IMG w-[40%] mr-auto flex justify-start items-end h-[200px]">
+                    <img src="@largeIMG" alt="DikaAsiya" title="DikaAsiya"  class="w-full h-[135px] translate-y-[-13%]
+                    object-cover parallax-2 duration-100" >
+                </div>
+                    </face>
+                </basis>
+            </div>
+        </div>
+       </section>
+       <section class="Section-3 w-full relative py-[1.8em] flex" >
+        <basis core="print" datamembername="db.productCat">
+            <layout>
+                @child
+            </layout>
+            <face>
+        <img src="[##cms.cms.cdn##]/images/@catid-Def-M.jpg" alt="@title"  title="@title"
+         class="imgBanner w-full h-full absolute top-0 left-0
+         [&.show]:opacity-[1] duration-[.8s] opacity-0" >
+            </face>
+        </basis>
+        <img src="[##cms.cms.cdn##]/images/CatProduct-Def-M.jpg" alt="DikaAsiya" title="DikaAsiya" class="imgBanner w-full h-full absolute top-0 left-0
+        show [&.show]:opacity-[1] duration-[.8s] opacity-0" >
+        <div class="ProductCats-C w-full h-full flex flex-col justify-center items-center  relative z-[3]">
+            <basis core="print" datamembername="db.productCat">
+                <layout>
+                    @child
+                </layout>
+                <face filter="catid=210198">
+            <div class="TopS w-[88%] mx-auto flex flex-col gap-2 justify-center items-center">
+                <div class="Title w-full flex justify-center items-center">
+                    <h3 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50 text-center">
+                        @urltitle
+                    </h3>
+                </div>
+                <div class="Text w-full flex justify-center items-center">
+                    <p class="font-YekanBakh400 font-normal text-base leading-28 text-Woodsmoke/50 text-center">
+                        @urldescription
+                    </p>
+                </div>    
+            </div>
+                </face>
+            </basis>
+            <div class="BottomS w-full mx-auto flex overflow-hidden mt-[3em]">
+                <div class="Procats w-full flex overflow-hidden flex-col">
+                    <div class="swiper-procats w-full flex overflow-hidden py-[2em]">
+                        <div class="swiper-wrapper w-full">
+                            <basis core="print" datamembername="db.productCat">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="catid not in (210198)">
+                            <div class="swiper-slide group/prod w-full justify-center items-center
+                             flex GridItem "  data-IMG="[##cms.cms.cdn##]/images/@catid-Def-M.jpg">
+                                <a href="@link" alt="@title" title="@title"
+                                 class="w-full group-hover/prod:h-[130%] duration-[.8s]
+                                 h-full ProCat relative flex justify-center items-center">
+                                    <div class="IMG w-full flex h-full">
+                                        <img src="[##cms.cms.cdn##]/images/@catid-Def-M.jpg" alt="@title" title="@title" class="w-full h-full object-cover">
+            
+                                    </div>
+                                    <div class="OV absolute left-0 w-full
+                                     h-full top-0 z-1 flex justify-center items-center bg-[#1C1C1C80]">
+                                        <h3 class="font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50 text-center">
+                                          @title
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                </face>
+                            </basis>
+                   
+                            
+                        </div>
+                    </div>
+                    <div class="Navigation mt-[1.5em] w-full flex justify-center items-center">
+                        <div class="swiper-button-next w-[20px] h-[20px] flex justify-center items-center">
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.34258 11.345L0.166748 10.1667L4.57424 5.75585L0.166748 1.34502L1.34591 0.166687L5.75007 4.57752C6.06252 4.89007 6.23805 5.31391 6.23805 5.75585C6.23805 6.19779 6.06252 6.62164 5.75007 6.93419L1.34258 11.345Z" fill="#888888"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev  w-[20px] h-[20px] flex justify-center items-center">
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.06556 11.345L0.654726 6.93419C0.342274 6.62164 0.166748 6.19779 0.166748 5.75585C0.166748 5.31391 0.342274 4.89007 0.654726 4.57752L5.06556 0.166687L6.24389 1.34502L1.83639 5.75585L6.24723 10.1667L5.06556 11.345Z" fill="#888888"/>
+                                </svg>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" download="" class="mt-[2em] mx-auto Btn-Show  w-max border-[1px] border-Woodsmoke/50 bg-Woodsmoke600
+            py-[.5em] px-[1.2em] flex justify-center items-center text-Woodsmoke/50
+            font-YekanBakh400 font-normal text-sm leading-24 rounded-[5px]">
+                دانلود کاتالوگ
+            </a>
+        </div>
+       </section>
+       <section class="Section-4 pb-[2em] w-full flex bg-bgGray pt-[1em]">
+        <div class="Projects-C w-full flex flex-col">
+            <basis core="print" datamembername="db.projectCat">
+                <layout>
+                    @child
+                </layout>
+                <face filter="catid = 210214">
+            <div class="TopS w-[88%] mx-auto flex flex-col">
+                <div class="Title w-full flex justify-start items-start">
+                    <h4 class="font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        @title
+                    </h4>
+                </div>
+                <div class="Detail w-full flex justify-between items-center">
+                    <span class="Text w-auto flex justify-start font-YekanBakh400 font-normal text-base leading-28 text-blackTxt">
+                        @urldescription
+                    </span>
+              
+                </div>
+            </div>
+                </face>
+            </basis>
+            <div class="BottomS w-full mt-[2em] flex relative flex-col gap-1 overflow-hidden">
+               <div class="swiper-Project w-full flex">
+                <div class="swiper-wrapper w-full">
+                    <basis core="print" datamembername="db.list">
+                        <layout>
+                            @child
+                        </layout>
+                        <face>
+                    <div class="swiper-slide w-full flex justify-start items-start">
+                        <a href="@link" alt="@title" title="@title"   class="Proj group/proj w-full flex relative justify-start items-end :border-l-[1px] " >
+                            <div class="IMG w-full">
+                                <img src="@00360X00429prp" alt="@title" title="@title" class="w-full">
+                            </div>
+                            <div class="Detail absolute z-3 left-0 right-0
+                             duration-[.5s] ease-out 
+                             w-90p mx-auto flex flex-col gap-2">
+                                <div class="Title w-full flex overflow-hidden justify-start items-start">
+                                    <p class="font-YekanBakh700 mr-[1em] mb-[1em] opacity-0 translate-y-[100%] duration-100
+                                     font-bold text-2xl leading-41 text-Woodsmoke/50">
+                                        @title
+                                    </p>
+                                </div>
+                              
+                            </div>
+                        </a>
+                    </div>
+                        </face>
+                    </basis>
+                 
+                    
+                </div>
+               </div>
+               <div class="Navigation mt-[1.5em] w-[88%] mx-auto flex justify-between items-center">
+                <div class="swiper-button-next w-[20px] h-[20px] flex justify-center items-center">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.411 13.414L0 12L5.28899 6.707L0 1.414L1.415 0L6.69999 5.293C7.07493 5.66806 7.28556 6.17667 7.28556 6.707C7.28556 7.23733 7.07493 7.74594 6.69999 8.121L1.411 13.414Z" fill="#1C1C1C"/>
+                        </svg>
+                        
+                        
+                </div>
+                <span class="Btn w-auto flex justify-end items-center">
+                    <a  href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها" class="Btn-Show flex w-max gap-2 border-Woodsmoke600 border-b-[1px]
+                    py-[.5em] px-[1.2em]  justify-center items-center text-blackTxt
+                    font-YekanBakh400 font-normal text-sm leading-24 ">
+                    <span>
+                        همه‌ی پروژه‌ها
+                    </span>
+
+                    </a>
+                </span>
+                <div class="swiper-button-prev  w-[20px] h-[20px] flex justify-center items-center">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.87857 13.414L0.585573 8.121C0.210631 7.74594 0 7.23733 0 6.707C0 6.17667 0.210631 5.66806 0.585573 5.293L5.87857 0L7.29257 1.414L2.00357 6.707L7.29657 12L5.87857 13.414Z" fill="#1C1C1C"/>
+                        </svg>
+                        
+                </div>
+            </div>
+             
+                </div>
+            </div>
+        </div>
+       </section>
+       <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+    <basis core="call" file="mobile-script.inc" />
+    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+    <script src="[##cms.cms.cdn##]/js/homeMobile.js"></script>
+</body>
+</html>

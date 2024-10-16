@@ -1,0 +1,1 @@
+header.classList.add("activeHeader"),window.addEventListener("scroll",(function(){0==(window.pageYOffset||document.documentElement.scrollTop)&&$("header").addClass("activeHeader")}));let pros=document.querySelectorAll(".ProductCats .ProCat");pros.forEach((e=>{gsap.to(e,{opacity:1,y:0,scrollTrigger:{trigger:e,start:"top 50%",end:"bottom bottom",stagger:.3}})}));

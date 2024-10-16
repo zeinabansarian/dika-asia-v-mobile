@@ -1,0 +1,60 @@
+
+
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="productCat" parentid="210198" postsql="select * from [db.productCat] where parentid=210198"/> 
+</basis>
+<div class="Top-DropDowns overflow-y-scroll h-[50%] w-[91%] justify-center items-start mr-auto flex flex-col">
+<basis core="repeater" name="rep" datamembername="db.productCat">
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]">
+        <member name="list" size="240x180" type="list" parentid="[##rep.current.catid##]"/> 
+    </basis>
+
+    <basis core="tree" datamembername="rep.current" idcol="catid" parentidcol="parentid" nullvalue="210198">
+        <face level="1">
+            <div class="header-dropItem w-full flex justify-start items-start 
+            flex-col">
+            <div class="Top-S group w-full mx-auto flex justify-start items-center pb-[.4em]
+            hover:cursor-pointer relative">
+                  <div class="Title-S w-auto flex justify-start items-center">
+                      <span class="font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke800">
+                        @title
+                      </span>
+                  </div>
+                  <div class="Icon-S [&.rotate]:rotate-[180deg] duration-100 group w-auto flex justify-end items-center relative">
+                      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.75616 13.2445C9.53732 13.2449 9.32056 13.202 9.11834 13.1183C8.91612 13.0347 8.73243 12.9119 8.57783 12.757L4.16699 8.34533L5.34533 7.16699L9.75616 11.5778L14.167 7.16699L15.3453 8.34533L10.9345 12.7562C10.78 12.9112 10.5963 13.0341 10.3941 13.118C10.1919 13.2018 9.97506 13.2448 9.75616 13.2445Z" fill="#454545"/>
+                          </svg>
+                          
+                  </div>
+              </div>
+              @child
+        </face>
+        <face level="2">
+       
+              <div class="Bottom-S w-full mx-auto flex
+              justify-start items-start flex-col mt-[.5em] ">
+              <div class="ProCats w-full flex-col mr-auto flex justify-start gap-2">
+                  <div class="Title w-auto flex justify-start items-center">
+                      <p class="text-right font-YekanBakh400 font-normal text-base leading-28 text-Woodsmoke800">
+                       @title
+                      </p>
+                  </div>
+        </face>
+    </basis>
+        <basis core="print" datamembername="db.list">
+            <face>
+                <div class="Catpro w-auto flex flex-col gap-2">
+                    <a href="@link" class="catItem text-right duration-150 hover:text-punch600
+                     font-YekanBakh400 font-normal text-sm leading-24 text-Woodsmoke800">
+                       @title
+                    </a>
+            
+                </div>
+            </face>
+        </basis>
+    </div>
+    </div>
+</div>
+</basis>
+

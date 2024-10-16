@@ -48,6 +48,7 @@ module.exports = {
     fontFamily: {
       'YekanBakh700': ['YekanBakh700', 'YekanBakh700'],
       'YekanBakh400': ['YekanBakh400', 'YekanBakh400'],
+      'YekanBakh500': ['YekanBakh500', 'YekanBakh500'],
     
 
     },

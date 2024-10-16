@@ -216,7 +216,7 @@ $(document).ready(function() {
     m.classList.remove('header-dropItem')
     m.children[0].children[1].classList.add('hide')
     m.children[1].classList.add('hide')
-    let link = m.getAttribute('data-link')
+    let link = m.children[0].children[0].getAttribute('data-link')
     let tag = document.createElement('a')
     tag.setAttribute('href',link)
     tag.classList.add('header-font')

@@ -1,0 +1,1 @@
+header.classList.add("activeHeader"),window.addEventListener("scroll",(function(){0==(window.pageYOffset||document.documentElement.scrollTop)&&$("header").addClass("activeHeader")}));

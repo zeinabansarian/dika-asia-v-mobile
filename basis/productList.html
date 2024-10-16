@@ -1,0 +1,69 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="navcatid" type="tree" name="nav" parentid="[##cms.query.catid##]" 
+    postsql="select * from [db.nav] where parentcatid=[##cms.query.catid##] " /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]"> 
+    <member name="list" size="320x240" type="list"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputMobile.css">
+</head>
+<body class=" bg-bgGray">
+    <main class="ProductList-Mobile overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="Section-1 w-full flex mt-[7em] ">
+            <div class="Products-C w-88p mx-auto flex flex-col gap-4">
+                <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                    <h1 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke400">
+                        دسته‌بندی 
+                            محصولات
+                       
+                    </h1>
+                    <span class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        >
+                    </span>
+                    <span class="Current w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
+                        [##db.nav.title##]
+                    </span>
+                </div>
+                <div class="Products-Container w-full flex flex-col">
+              
+                    <div class="Products w-full flex flex-col gap-[.2em]  mt-[.5em] mb-[5em]">
+                        <basis core="print" datamembername="db.list">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
+                        <a href="@link" alt="@title" title="@title" class="Product relative opacity-0 duration-150 translate-y-[100%]
+                         w-full flex justify-center items-center">
+                           <div class="IMG w-full h-full flex justify-center items-center">
+                            <img src="@00320X00240prp" alt="@title" title="@title" class="w-full object-cover h-full">
+                           </div>
+                           <div class="OV absolute flex justify-center items-center
+                            left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                            <h2 class=" font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke/50">
+                                @title
+                            </h2>
+                           </div>
+                        </a> 
+                            </face>
+                        </basis>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+<basis core="call" file="mobile-script.inc" />
+<script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+<script src="[##cms.cms.cdn##]/js/productListMobile.js"></script>
+</body>
+</html>
