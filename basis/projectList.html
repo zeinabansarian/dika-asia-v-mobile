@@ -1,0 +1,103 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="cat" id="[##cms.query.catid##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="[##cms.query.catid##]"> <member name="projectList" type="list" size="320x240" request="catname"/> </basis>	
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" > <member request="cat" type="tree" name="filter" parentid="210214" size="584x438"></member> </basis>	
+
+<!DOCTYPE html>
+
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputMobile.css" />
+</head>
+
+<body>
+    <div class="projectList pb-16 bg-bgGray">
+        <div class="title flex items-center w-88p mx-auto pt-28 pb-4 border-b border-b-Woodsmoke400 mb-8">
+            
+            <basis core="print" datamembername="db.filter">
+                <layout>
+                        <h1 class="font-YekanBakh700 text-punch600 text-xl">
+                            <span class="text-blackTxt"> پروژه‌های </span>
+                        @child
+                    </h1>
+                    </layout>
+               
+                    <face filter="catid='[##cms.query.catid##]'">
+                            @title
+                    </face>
+                </basis>
+            <div class="dropdownssss absolute left-[6%]">
+                <select style="background-color: transparent" class="font-YekanBakh400 text-base text-blackTxt" name=""
+                    id="">
+                    <basis core="print" datamembername="db.filter">
+                       
+                        <face filter="catid<>210214">
+                            <option class="font-YekanBakh400 text-base text-blackTxt filterBtn" data-project="/load-projectMobile.inc?catid=@catid&refresh=true" value="/load-projectMobile.inc?catid=@catid&refresh=true">
+                              @title
+                            </option>
+                            
+                        </face>
+                    </basis>
+                </select>
+            </div>
+        </div>
+        <div class="projectContainer w-88p mx-auto">
+
+            <basis core="print" datamembername="db.projectList">
+           
+                <else-layout>
+                    <div class="para font-YekanBakh400 text-base text-blackTxt">
+                        <p>
+                          متاسفانه پروژه‌ای موجود نیست.
+                        </p>
+                      </div>
+                </else-layout>
+                <face>
+                    
+                    <div class="projectBox pb-5 border-b border-Woodsmoke800">
+                        <a href="/@link" title="@title">
+                            <div class="imgS">
+                                <img class="w-full" src="/@00320X00240prp" alt="@title" title="@title">
+                            </div>
+                            <div class="title">
+                                <h2 class="mt-2 font-YekanBakh700 text-lg text-blackTxt">
+                                   @title
+                                </h2>
+                            </div>
+                        </a>
+                    </div>
+                </face>
+            </basis>
+
+        </div>
+
+    </div>
+    <basis core="call" file="mobile-script.inc" />
+
+
+    <script>
+
+        let dropdowns = document.querySelector(".dropdownssss select")
+    
+        dropdowns.addEventListener("change",function (params) {
+          console.log(this.value);
+          var url4 = this.value
+          $(".projectContainer").load(url4);
+          
+        })
+         
+      </script>
+</body>
+
+</html>

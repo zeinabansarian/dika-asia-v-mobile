@@ -1,0 +1,94 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" > <member request="cat" type="tree" name="projectCat" parentid="210214" /> </basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <title>
+    پروژه‌ها 
+    
+  </title>
+
+
+        <meta name="description" content="پروژه‌های دیکا آسیا" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputMobile.css">
+
+  <style>
+ 
+  </style>
+</head>
+<body>
+
+<main class="productCat bg-bgGray">
+  <div id="fullpage">
+
+
+    <section class="section pt-28">
+      <div class="inner flex-col flex justify-end">
+        <div class="section1 mb-10 w-88p mx-auto">
+          <h1 class="font-YekanBakh700 text-2xl text-blackTxt mb-1 text-center" >
+  
+              دسته‌بندی پروژه‌ها
+          </h1>
+
+          <basis core="print" datamembername="db.projectCat">
+              <layout>
+                <div class="para font-YekanBakh400 text-lg text-blackTxt text-center">
+                  
+                  @child
+                </div>
+              </layout>
+              
+              <face filter="catid=210214">
+                <p>
+                  @urldescription
+                </p>
+              </face>
+          </basis>
+      </div>
+      <div class="section2 relative">
+          <div class="imgS relative after:absolute after:w-full after:h-full after:bg-blackTxt/[0.5] after:inset-0">
+              <img class="w-full" src="[##cms.cms.cdn##]/images/projectCat-mobile.jpg" alt=" دسته‌بندی پروژه‌ها" title=" دسته‌بندی پروژه‌ها">
+          </div>
+         
+      </div>
+
+      </div>
+    </section>
+
+
+    <basis core="print" datamembername="db.projectCat">
+     
+        <face filter="catid<>210214">
+            
+          <section class="section section3">
+           <div class="inner relative snapS">
+            <a href="/@link" title="@title">
+      
+              <div class="imgS relative h-full after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-t after:from-[#1C1C1CBF] after:to-#1C1C1C00">
+                  <img class="w-full h-full object-cover" src="[##cms.cms.cdn##]/images/@catid.jpg" alt="@title" title="@title">
+              </div>
+              <div class="title absolute bottom-10 left-0 right-0 text-center">
+                  <h2 class="text-center font-YekanBakh700 text-2xl text-Woodsmoke50 mb-2">
+                   @title
+                  </h2>
+                  <h3 class="text-center text-Woodsmoke50 font-YekanBakh400 text-lg">
+                      انواع @title 
+                  </h3>
+              </div>
+          </a>
+           </div>
+          </section>
+        </face>
+    </basis>
+ 
+
+    
+  </div>
+ 
+</main>
+
+<basis core="call" file="mobile-script.inc" />
+</body>
+</html>

@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: "YekanBakh700";
+  src: url("../_fonts/YekanBakh-Heavy.eot");
+  src: url("../_fonts/YekanBakh-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/YekanBakh-Heavy.woff") format("woff"),
+    url("../_fonts/YekanBakh-Heavy.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 @font-face {
@@ -22,6 +31,10 @@
   src: url("../_fonts/YekanBakh-Regular.eot");
   src: url("../_fonts/YekanBakh-Regular.eot?#iefix")
       format("embedded-opentype"),
+}
+@font-face{font-family: "YekanBakh400";
+  src: url("../_fonts/YekanBakh-Regular.eot");
+  src: url("../_fonts/YekanBakh-Regular.eot?#iefix") format("embedded-opentype"),
     url("../_fonts/YekanBakh-Regular.woff") format("woff"),
     url("../_fonts/YekanBakh-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -107,6 +120,13 @@ a,ul,li{
 
 
   h1,
+
+* {
+  font-family: "YekanBakh400";
+  direction: rtl;
+}
+
+h1,
 h2 {
   font-size: 24px;
   line-height: 23px;
@@ -389,4 +409,68 @@ height: 130%;
     -moz-transform: unset;
     -ms-transform: unset;
     -o-transform: unset;
+  }
+.articleShow .commentP .nameInput::after,
+.articleShow .commentP .emailInput::after,
+.articleShow .commentP .msgInput::after {
+  content: "*";
+  position: absolute;
+  top: 13px;
+  color: #f00;
+}
+.articleShow .commentP .nameInput::after{
+right: 124px;
+}
+.articleShow .commentP .emailInput::after{
+  right: 53px;
+}
+
+.articleShow .commentP .msgInput::after{
+  right: 83px;
+  top: 16px;
+}
+.articleShow .commentP input::placeholder,
+.articleShow .commentP textarea::placeholder {
+  color: #5d5d5d;
+  font-family: "YekanBakh400";
+  font-size: 16px;
+  line-height: 28px;
+  text-align: right;
+}
+.articleShow .commentP input,
+.articleShow .commentP textarea {
+  background-color: transparent;
+  direction: rtl;
+  position: relative;
+}
+
+
+.viewPagination .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: #888888;
+  transition: 0.5s ease;
+}
+
+
+.viewPagination .swiper-pagination-bullet-active{
+  background-color: #E33026;
+}
+
+
+.loaded {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+
+.project .projectGalleryBox:nth-child(3) ~ .projectGalleryBox {
+  display: none;
+}
+.aboutUs .projectGalleryBox:nth-child(3) ~ .projectGalleryBox {
+  display: none;
 }

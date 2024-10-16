@@ -1,0 +1,1492 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="207136">
+    <member name="projectlist" propertyid="13870" type="list" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2339286">
+    <member name="aboutus" type="view" />
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2339286">
+    <member name="about-image" type="list" format="4" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="207138">
+    <member name="list-project" size="500x500" type="list" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1">
+    <member request="cat" type="tree" name="title" parentid="207202" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="207202">
+    <member name="list-blog" type="list" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> گروه برکان | مشاور و طراح سازه | BERKAN GROUP | Structural designer and consultant</title>
+    <meta name="description"
+        content="برکان یک گروه با ایده های نوین و خاص برای مشاوره و طراحی سازه های ساختمانی و صنعتی است.  | Berkan is a group with new and special ideas for consulting and designing  construction and industrial structures ." />
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/locomotive.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper.css" />
+    <!-- <link rel="stylesheet" href="[##cms.cms.cdn##]/css/home.css" /> -->
+    <style>
+        .wrapp .Slider_Container .video {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+
+        .Open .Menu_Item a {
+            opacity: 1 !important;
+        }
+
+        @keyframes f-trans {
+            0% {
+
+                transform: translateY(0%);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes s-trans {
+            0% {
+
+                transform: translateY(100%);
+            }
+
+
+            100% {
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes change-height {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: 120%;
+            }
+        }
+
+        .page__header__navtrigger {
+
+            color: #000;
+            margin: 0 1rem;
+            pointer-events: auto;
+            position: relative;
+            all: unset;
+            display: revert;
+            padding: 3rem 0rem;
+            cursor: pointer;
+        }
+
+        .page__header__navtrigger .menu__icon {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            position: relative;
+            width: 56px;
+            margin: 0 auto;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .page__header__navtrigger .menu__icon--bar {
+            background: #000;
+            height: 0.125rem;
+            left: 0;
+            position: absolute;
+            transition: transform .64s cubic-bezier(.165, .84, .44, 1) .32s;
+            width: 100%;
+        }
+
+        .page__header__navtrigger .menu__icon--bar:first-child {
+            transform: translateY(-0.25rem);
+        }
+
+        .page__header__navtrigger .menu__icon--bar:last-child {
+            transform: translateY(0.25rem);
+        }
+
+        .is-active.page__header__navtrigger .menu__icon--bar:first-child,
+        .is-active.page__header__navtrigger .menu__icon--bar:last-child {
+            transform: translateY(0);
+        }
+
+        .is-active.page__header__navtrigger .menu__icon--bar {
+            transition: transform .64s cubic-bezier(.165, .84, .44, 1);
+        }
+
+        .page__header__navtrigger .menu__icon--bar:first-child {
+            transform: translateY(-0.25rem);
+        }
+
+
+
+        .scroll_fixparent {
+            position: absolute;
+            left: 80px;
+            top: unset;
+            z-index: 2;
+            margin: 0;
+
+
+            gap: 10px;
+            bottom: 80px;
+
+
+        }
+
+        .scroll_fix_inner {
+            overflow: hidden;
+            width: 90px;
+            height: 40px;
+        }
+
+        .scroll_fix2 {
+
+            animation: move 3s 1s infinite;
+
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+            font-size: 13px;
+
+        }
+
+        .scroll_fix3 {
+
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+            animation: move 3s 2s infinite;
+
+
+        }
+
+
+
+
+
+
+
+        .scroll_fix img {
+            transform: rotate(90deg);
+        }
+
+        .scroll_fix p {
+
+            font-size: 15px;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        .scroll_fix .scroll_fix2 p {
+
+
+            color: red;
+        }
+
+
+
+
+
+
+        .Logo_First {
+            transition: all 1.4s;
+        }
+
+        .hoverss01,
+        .hoverss02,
+        .hoverss03,
+        .hoverss04 {
+            transition: all 1.4s;
+        }
+
+        .Logo_First:hover .hoverss {}
+
+        /* .Logo_First:hover .hoverss2 {
+
+
+        fill: #000;
+    } */
+
+
+        .Logo_First:hover .hoverss01 {
+            transform: translateY(-4px);
+        }
+
+        .Logo_First:hover .hoverss02 {
+            transform: translateY(0px);
+        }
+
+        .Logo_First:hover .hoverss03 {
+            transform: translateY(8px);
+        }
+
+        .Logo_First:hover .hoverss04 {
+            transform: translateY(17px);
+        }
+
+        .bottom_menu {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px 10px;
+        }
+
+
+
+        .Projects_Container .Project:hover .Image>img {
+
+            transform: scale(1.04) !important;
+        }
+
+        .Projects_Container .Project .Image>img {
+
+
+            transition: all 0.64s;
+        }
+
+        @keyframes move {
+            0% {
+                opacity: 1;
+                transform: translateX(120px);
+            }
+
+            99% {
+                opacity: 1;
+                transform: translateX(-80px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+
+        }
+
+
+
+
+
+
+        .scroll_fix_inner img {
+            transform: rotate(90deg);
+            width: 20px;
+        }
+
+        .About_Us:hover .image>img {
+            transform: scale(1.04) !important;
+        }
+
+        .About_Us .image>img {
+            transition: all 0.64s;
+        }
+
+        .text {
+            overflow: hidden;
+            padding-top: 15px;
+        }
+
+        .showMore {
+            overflow: hidden;
+            padding-top: 15px;
+        }
+
+        .title {
+            overflow: hidden;
+            padding-top: 15px;
+        }
+
+        .clr .Top .Text {
+            overflow: hidden;
+            padding-top: 15px !important;
+        }
+
+        .clr .Top .Title {
+            overflow: hidden;
+            padding-top: 15px;
+        }
+
+        .wrapp {
+            width: 100vw;
+            min-width: unset;
+            overflow: hidden;
+        }
+
+        @media (max-width:1440px) {
+            .Projects_Container .Project .Image>img {
+                max-width: 450px;
+                height: auto;
+            }
+
+            .clr .Blog_Container .Blog .Image img {
+
+                max-width: 340px;
+                height: auto;
+            }
+
+            .text {
+                overflow: hidden;
+                padding-top: 25px;
+            }
+
+            .About_Us .text>p {
+                font-size: 12px;
+            }
+        }
+
+        .Logo_First_fix_parent {
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .Logo_First_fix {
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            margin: 0.5rem 0.5rem;
+            transition: all 0.8s ease-in;
+            -webkit-transition: all 0.8s ease-in;
+            -moz-transition: all 0.8s ease-in;
+            -ms-transition: all 0.8s ease-in;
+            -o-transition: all 0.8s ease-in;
+        }
+
+        footer.DesktopFooter .Top {
+            margin-top: 60px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/new-main.css">
+    <style>
+        .Logo_First_fix_parent.darkmmmm svg,
+        .Logo_First_fix_parent.darkmmmm path {
+
+            stroke: black !important;
+
+            transition: all 1.0s;
+        }
+
+        .Logo_First_fix_parent.darkmmmm path.hoverss2 {
+
+            fill: black !important;
+            transition: all 1.0s;
+        }
+
+        .Logo_First_fix_parent.darkmmmm svg,
+        .Logo_First_fix_parent.darkmmmm path {
+
+            stroke: black !important;
+
+            transition: all 1.0s;
+        }
+
+        footer.DesktopFooter .Top {
+            margin-top: 30px;
+        }
+
+        .Logo_First_fix {
+            margin: 0.5rem 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- LOADDER -->
+    <div class="Load_Container" style="background-color: #fffdff;">
+        <div class="LoadBox">
+            <img src="/images/loading-logo-berkan.gif" alt="berkan">
+        </div>
+    </div>
+    <!-- LOADDER -->
+    <!-- header -->
+    <basis core="call" file="header-new.inc" pageindex="[##cms.cms.pageindex##]" />
+    <!-- header -->
+    <div class="Logo_First_fix_parent ">
+        <div class="Logo_First_fix">
+
+            <div class="Logo_First">
+                <a href="/">
+                    <svg width="72" height="80" viewBox="0 0 72 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_254_1013)">
+                            <path d="M6.4812 70.4941L8.32051 70.5189H8.70004V79.9268H6.4812V70.4941Z" fill="white"
+                                class="hoverss2" />
+                            <path
+                                d="M50.1035 70.2334C50.4169 70.8599 50.7312 71.4864 51.0465 72.1129L54.8872 79.7431C54.9208 79.8101 54.947 79.8886 54.9865 79.9774C54.2026 79.9774 53.442 79.9774 52.6815 79.9686C52.6129 79.9686 52.5238 79.8566 52.483 79.7766C51.7414 78.3218 51.0032 76.8671 50.2685 75.4123C49.8466 74.5788 49.4233 73.7466 49.0073 72.9087C48.9774 72.836 48.9774 72.7545 49.0073 72.6818C49.3445 71.8991 49.6904 71.1208 50.0291 70.3396C50.0395 70.3074 50.0468 70.2743 50.051 70.2407L50.1035 70.2334Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M55.8276 70.474H56.1196C57.067 70.474 58.0173 70.474 58.9618 70.474C59.0597 70.4661 59.1579 70.4842 59.2464 70.5267C59.3349 70.5691 59.4105 70.6343 59.4654 70.7155C59.7413 71.0704 60.0639 71.3876 60.3646 71.7236C61.1441 72.5965 61.9207 73.4693 62.7002 74.3349C63.1571 74.8441 63.6126 75.3532 64.0884 75.8478C64.225 75.97 64.3332 76.1204 64.4055 76.2885C64.4779 76.4565 64.5126 76.6383 64.5074 76.8211C64.4855 77.7725 64.5278 78.7254 64.5439 79.6782C64.5439 79.7626 64.5439 79.847 64.5439 79.9968C63.7104 79.073 62.9192 78.1958 62.1236 77.3215C61.7499 76.9098 61.3645 76.5112 60.9894 76.101C60.2332 75.2761 59.4843 74.4455 58.7282 73.6206C58.3472 73.2046 57.9589 72.7958 57.5764 72.3812C57.0057 71.7556 56.4334 71.1373 55.8276 70.474Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M34.5309 79.9819C33.6652 79.9441 32.839 80.0764 32.042 79.7433C31.1997 79.3898 30.7895 78.7599 30.7676 77.9103C30.7486 77.1669 30.5282 76.5268 29.9618 76.0191C29.8553 75.9246 29.7326 75.846 29.6056 75.7529C30.6143 75.1928 31.0333 74.2676 31.042 73.1431C31.0508 72.0186 30.645 71.1064 29.5823 70.5245C30.7019 70.4983 31.8318 70.3674 32.6974 71.2766C33.3105 71.9225 33.5733 72.6994 33.3966 73.5737C33.2975 74.0231 33.1415 74.4582 32.9324 74.8684C32.7472 75.2371 32.4252 75.5194 32.0347 75.6554C31.9884 75.6781 31.944 75.7044 31.9018 75.734C32.5982 75.8198 32.9573 76.2592 33.1353 76.844C33.2378 77.2308 33.3081 77.6254 33.3455 78.0238C33.4521 78.8326 33.7207 79.5382 34.5309 79.9819Z"
+                                fill="white" class="hoverss2" />
+                            <path d="M16.3494 70.4878H18.5522V79.967H16.3494V70.4878Z" fill="white" class="hoverss2" />
+                            <path d="M25.3066 70.5332H27.5153V79.9658H25.3066V70.5332Z" fill="white" class="hoverss2" />
+                            <path d="M35.6899 79.9572V70.542H37.919V79.9572H35.6899Z" fill="white" class="hoverss2" />
+                            <path
+                                d="M10.9204 79.999C12.024 79.2716 12.3553 78.2257 12.2736 77.0357C12.2064 76.0624 11.8065 75.2347 10.8999 74.7328C12.5203 73.4802 11.9437 71.0144 10.8416 70.482C11.7816 70.4558 12.6779 70.4122 13.4458 71.0159C13.6499 71.1784 13.8167 71.3826 13.935 71.6147C14.0534 71.8468 14.1205 72.1014 14.1319 72.3615C14.1873 73.0031 14.0676 73.6155 13.6399 74.1334C13.4002 74.4214 13.0682 74.6182 12.6998 74.6906C12.9141 74.7583 13.1242 74.8385 13.329 74.9306C13.9392 75.2536 14.2881 75.8035 14.5187 76.4159C14.674 76.8148 14.7323 77.2446 14.6886 77.6702C14.645 78.0958 14.5007 78.505 14.2676 78.8643C14.0867 79.1686 13.8338 79.4242 13.531 79.6088C13.2282 79.7934 12.8848 79.9014 12.5305 79.9234C11.9991 79.9714 11.459 79.9757 10.9204 79.999Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M38.9761 75.59L40.4942 74.2021L44.7173 79.9557C44.6605 79.9668 44.6029 79.9741 44.5451 79.9775C43.8152 79.9775 43.0853 79.9775 42.3554 79.9775C42.304 79.9742 42.2537 79.9606 42.2076 79.9377C42.1614 79.9147 42.1204 79.8827 42.0868 79.8437C41.2421 78.7003 40.4013 77.5529 39.5644 76.4017C39.3819 76.1399 39.1921 75.8838 38.9761 75.59Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M44.8733 79.9599C45.6533 79.2438 46.3145 78.4091 46.8323 77.4868C47.4264 78.4208 48.0454 79.3431 49.0599 79.9599H44.8733Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M44.1463 70.5332L41.7129 72.7808C41.4969 71.8483 41.0297 71.0773 40.1772 70.5332H44.1463Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M59.3935 79.9744H55.8799C56.6886 79.1234 56.9805 78.0832 57.1236 76.9194C57.6739 78.1312 58.3162 79.1932 59.3935 79.9744Z"
+                                fill="white" class="hoverss2" />
+                            <path d="M23.4335 76.7666V79.9583H20.7446C21.7942 79.0273 22.7533 78.0351 23.4335 76.7666Z"
+                                fill="white" class="hoverss2" />
+                            <path d="M20.793 70.4824H23.3768V73.5127C22.7447 72.33 21.9652 71.2825 20.793 70.4824Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M21.8483 76.7744C21.3505 75.9568 20.6469 75.436 19.7886 75.0287C20.657 74.6843 21.3829 74.0573 21.8483 73.2495V76.7744Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M62.519 70.4839H65.5262C64.9651 71.1772 64.5827 71.9968 64.4124 72.8711C64.0699 71.8851 63.4026 71.0437 62.519 70.4839Z"
+                                fill="white" class="hoverss2" />
+                            <path
+                                d="M36.0107 42.9033L71.1531 21.5562L36.0107 0.508789L0.846436 21.5926L36.0107 42.9033Z"
+                                stroke="white" stroke-miterlimit="10" class="hoverss04" />
+                            <path d="M36.011 49.4844L71.1534 28.1373L36.011 7.08984L0.84668 28.1736L36.011 49.4844Z"
+                                stroke="white" stroke-miterlimit="10" class="hoverss03" />
+                            <path d="M36.011 55.981L71.1534 34.6339L36.011 13.5864L0.84668 34.6702L36.011 55.981Z"
+                                stroke="white" stroke-miterlimit="10" class="hoverss02" />
+                            <path d="M36.011 62.5889L71.1534 41.2403L36.011 20.1943L0.84668 41.2781L36.011 62.5889Z"
+                                stroke="white" stroke-miterlimit="10" class="hoverss01" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_254_1013">
+                                <rect width="72" height="80" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="container">
+        <section id="PinSection">
+            <div class="Pin-Wrapp">
+                <section class="wrapp darkSection">
+                    <div class="Slider_Container">
+
+
+                        <div class="scroll_fixparent">
+
+
+                            <div class="scroll_fix_inner">
+                                <div class="scroll_fix2">
+                                    <img src="/images/leftscroll.png" alt="berkan">
+                                    <p>
+                                        اسکرول
+
+                                    </p>
+
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+
+                        <!-- LOGO -->
+
+                        <div class="video">
+                            <video src="[##cms.cms.cdn##]/images/berkan-def.mp4" muted loop playsinline></video>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </section>
+
+                <div class="clr darkSection">
+
+                    <div class="About_Us ">
+                        <div class="image">
+                            <basis core="print" datamembername="db.about-image">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="ord in (1)">
+                                    <img src="/@largeIMG" alt="berkan">
+                                </face>
+                            </basis>
+                        </div>
+                        <div class="title">
+                            <basis core="print" datamembername="db.aboutus">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID in (128)">
+                                    <h2>@Answer</h2>
+                                </face>
+                            </basis>
+
+                        </div>
+                        <div class="text">
+                            <basis core="print" datamembername="db.aboutus">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID in (129)">
+                                    @Answer
+                                </face>
+                            </basis>
+                        </div>
+                        <div class="showMore">
+                            <a href="/درباره-ما">
+                                درباره ما
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clr  colorlogof">
+                    <div class="Projects_Container">
+                        <basis core="print" datamembername="db.list-project">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
+                                <div class="Project">
+                                    <a href="/@link">
+                                        <div class="Image">
+                                            <img class="imgclasss" src="/@00500X00500prp" alt="@title">
+                                        </div>
+                                    </a>
+                                    <div class="Title">
+                                        <h3> @title</h3>
+                                    </div>
+                                    <div class="showMore">
+                                        <a href="/@link" alt="@title">اطلاعات بیشتر</a>
+                                    </div>
+                                </div>
+                            </face>
+                        </basis>
+                    </div>
+                </div>
+
+                <div class="clr colorlogomm">
+
+                    <div class="projectBG">
+                        <img src="[##cms.cms.cdn##]/images/bg2.png" alt="berkan" class="imgBG">
+                        <div class="Box">
+                            <div class="Top">
+                                <div class="Title">
+                                    <h4>پروژه‌های برکان</h4>
+                                </div>
+                                <div class="Text">
+                                    <p> پروژه های برکان ترکیبی منحصر به فرد از فناوری های نوین سازه ای، خلاقیت و کیفیت
+                                        در خلق سازه های خاص می باشد.</p>
+                                </div>
+                            </div>
+                            <div class="Bottom">
+                                <div class="showMore">
+                                    <a href="پروژه-ها">همه پروژه‌ها </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clr colorlogo darkSection">
+                    <img src="[##cms.cms.cdn##]/images/picture-def.jpg" alt="پروژه قزوین (طرح توسعه کارخانه ایران رول)"
+                        class="bg">
+                </div>
+
+                <div class="clr BG_Color darkSection">
+                    <img src="[##cms.cms.cdn##]/images/bg2.png" alt="berkan" class="imgBG">
+
+                    <div class="Box">
+                        <div class="Top">
+                            <div class="Title">
+                                <h4>مقالات </h4>
+                            </div>
+                            <div class="Text blogsA">
+                                <basis core="print" datamembername="db.title">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face>
+                                        <p>@urldescription</p>
+                                    </face>
+                                </basis>
+                            </div>
+                        </div>
+                        <div class="Bottom">
+                            <div class="showMore">
+                                <a href="/مقالات">همه مقاله ها</a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="clr colorlogomm">
+                    <div class="Blog_Container">
+                        <div class="Left">
+                            <basis core="print" datamembername="db.list-blog">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber<3">
+                                    <div class="Blog">
+                                        <div class="Image">
+                                            <a href="@link" alt="@title">
+                                                <img src="/images/@id.png" alt="@title" class="bg0">
+                                            </a>
+                                        </div>
+                                        <div class="Title">
+                                            <h5>@title </h5>
+                                        </div>
+                                        <div class="showMore">
+                                            <a href="@link">ادامه‌ی مطلب </a>
+                                        </div>
+                                    </div>
+                                </face>
+                            </basis>
+
+
+
+                        </div>
+
+                        <div class="Right">
+                            <basis core="print" datamembername="db.list-blog">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber=3">
+                                    <div class="Blog Blog@RowNumber">
+                                        <div class="Image">
+                                            <a href="@link" alt="@title">
+                                                <img src="/images/@id.png" alt="@title" class="bg0">
+                                            </a>
+                                        </div>
+                                        <div class="Title">
+                                            <h5>@title </h5>
+                                        </div>
+                                        <div class="showMore ">
+                                            <a href="@link">ادامه‌ی مطلب </a>
+                                        </div>
+                                    </div>
+                                </face>
+                            </basis>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clr colorlogo2">
+                    <basis core="call" file="footer-new.inc" pageindex="[##cms.cms.pageindex3##]" />
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+    <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/gsap.js"></script>
+    <script src="[##cms.cms.cdn##]/js/locoScroll.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.js"></script>
+    <script src="[##cms.cms.cdn##]/js/imageLoaded.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+    <script src="[##cms.cms.cdn##]/new/js/config.js"></script>
+    <!-- <script src="[##cms.cms.cdn##]/new/js/new-default.js"></script> -->
+
+
+    <script>
+
+        $(".container").imagesLoaded({}, (function () {
+            $(document).ready((function () {
+                setTimeout((() => {
+                    gsap.registerPlugin(ScrollTrigger);
+                    const e = document.querySelector(".container"),
+                        r = new LocomotiveScroll({
+                            el: e,
+                            direction: "horizontal",
+                            smooth: !0,
+                            lerp: .05
+                        });
+                    r.on("scroll", ScrollTrigger.update), ScrollTrigger
+                        .scrollerProxy(e, {
+                            scrollTop(e) {
+                                return arguments.length ? r.scrollTo(e, 0, 0) :
+                                    r.scroll.instance.scroll.y
+                            },
+                            getBoundingClientRect: () => ({
+                                left: 0,
+                                top: 0,
+                                width: window.innerWidth,
+                                height: window.innerHeight
+                            }),
+                            pinType: e.style.transform ? "transform" : "fixed"
+                        });
+                    document.querySelectorAll(".Pin-Wrapp > *");
+                    let o = document.querySelector(".Pin-Wrapp").offsetWidth,
+                        t = o - window.innerWidth;
+
+
+                    scrollTween = gsap.to(".Pin-Wrapp", {
+                        scrollTrigger: {
+                            scroller: e,
+                            scrub: !0,
+                            trigger: "#PinSection",
+                            pin: !0,
+                            start: "top top",
+                            end: o
+                        },
+                        x: t,
+                        ease: "none"
+                    }), ScrollTrigger.addEventListener("refresh", (() => r
+                        .update())), ScrollTrigger.refresh(), r.update(), window
+                            .addEventListener("load", (function () {
+                                ScrollTrigger.addEventListener("refresh", (() =>
+                                    r.update())), ScrollTrigger.refresh(), r
+                                        .update()
+                            })), window.addEventListener("resize", (() => {
+                                ScrollTrigger.addEventListener("refresh", (() =>
+                                    r.update())), ScrollTrigger.refresh(), r
+                                        .update()
+                            }));
+                    document.querySelectorAll(".swiper-first swiper-slide");
+                    gsap.to(".Logo_First", {
+                        opacity: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: ".swiper-first",
+                            scrub: !0,
+                            containerAnimation: scrollTween,
+                            start: "top 20%"
+                        },
+                        ease: "slow(0.5, 0.8)"
+                    }), gsap.set(".DesktopHeader .Left .Logo", {
+                        opacity: 0,
+                        duration: 1
+                    }), gsap.to(".DesktopHeader .Left .Logo", {
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: ".swiper-first",
+                            scrub: !0,
+                            containerAnimation: scrollTween,
+                            start: "top 20%"
+                        },
+                        ease: "slow(0.5, 0.8)"
+                    }), gsap.set(".About_Us img", {
+                        scale: 1.3
+                    }), gsap.to(".About_Us img", {
+                        scrollTrigger: {
+                            trigger: ".About_Us",
+                            containerAnimation: scrollTween,
+                            start: "top top"
+                        },
+                        duration: 1,
+                        ease: "none",
+                        scale: 1
+                    }),
+
+
+
+
+                        S = document.querySelector(".Logo_First_fix_parent");
+                    document.querySelectorAll(".colorlogof").forEach((e) => {
+
+                        gsap.to(e, {
+
+                            scrollTrigger: {
+                                trigger: e,
+                                containerAnimation: scrollTween,
+                                start: "top -100%",
+                                end: "bottom bottom",
+
+                                onEnter: () => {
+                                    S.classList.add("darkmmmm"), console.log("onEnter");
+                                },
+                                onLeave: () => {
+                                    S.classList.add("darkmmmm"), console.log("onLeave");
+
+                                },
+                                onEnterBack: () => {
+                                    S.classList.add("darkmmmm"), console.log("onEnterBack");
+                                },
+                                onLeaveBack: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onLeaveBack");
+                                },
+                            },
+
+
+                            duration: 0,
+                            ease: "none",
+                            scrub: true,
+
+                        });
+
+                    });
+
+
+                    S = document.querySelector(".Logo_First_fix_parent");
+                    document.querySelectorAll(".colorlogo").forEach((e) => {
+
+                        gsap.to(e, {
+
+                            scrollTrigger: {
+                                trigger: e,
+                                containerAnimation: scrollTween,
+                                start: "top -100%",
+                                end: "bottom bottom",
+
+                                onEnter: () => {
+                                    S.classList.add("darkmmmm"), console.log("onEnter");
+                                },
+                                onLeave: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onLeave");
+
+                                },
+                                onEnterBack: () => {
+                                    S.classList.add("darkmmmm"), console.log("onEnterBack");
+                                },
+                                onLeaveBack: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onLeaveBack");
+                                },
+                            },
+
+
+                            duration: 0,
+                            ease: "none",
+                            scrub: true,
+
+                        });
+
+                    });
+
+
+                    let darkSection = document.querySelectorAll(".darkSection")
+
+                    darkSection.forEach(element => {
+                        gsap.to(element, {
+                            scrollTrigger: {
+                                trigger: element,
+                                containerAnimation: scrollTween,
+                                start: "left left",
+                                end: "right right",
+                                markers: true,
+                                onEnter: () => {
+                                    console.log("enter dark section");
+                                    
+                                },
+                                onLeave: () => {
+                                    
+                                    console.log("leave dark section");
+                                },
+                                onEnterBack: () => {
+                                    
+                                    console.log("enterback dark section");
+                                },
+                                onLeaveBack: () => {
+                                    console.log("leaveback dark section");
+
+                                }
+                            },
+
+                        })
+
+                    });
+
+
+                    document.querySelectorAll(".colorlogomm").forEach((e) => {
+
+                        gsap.to(e, {
+
+                            scrollTrigger: {
+                                trigger: e,
+                                containerAnimation: scrollTween,
+                                start: "top -50%",
+                                end: "bottom bottom",
+
+
+
+                                onEnter: () => {
+                                    S.classList.add("darkmmmm"), console.log("onEnter");
+                                },
+                                onLeave: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onLeave");
+
+                                },
+                                onEnterBack: () => {
+                                    S.classList.add("darkmmmm"), console.log("onEnterBack");
+                                },
+                                onLeaveBack: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onLeaveBack");
+                                },
+                            },
+
+
+                            duration: 0,
+                            ease: "none",
+                            scrub: true,
+
+                        });
+
+                    });
+
+
+
+                    document.querySelectorAll(".colorlogo2").forEach((e) => {
+
+                        gsap.to(e, {
+
+                            scrollTrigger: {
+                                trigger: e,
+                                containerAnimation: scrollTween,
+                                start: "0% 0%",
+                                end: "bottom bottom",
+
+
+
+                                onEnter: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onEnter");
+                                },
+                                onLeave: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onLeave");
+
+                                },
+                                onEnterBack: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onEnterBack");
+                                },
+                                onLeaveBack: () => {
+                                    S.classList.remove("darkmmmm"), console.log("onLeaveBack");
+                                },
+                            },
+
+
+                            duration: 0,
+                            ease: "none",
+                            scrub: true,
+
+                        });
+
+                    });
+
+
+                    document.querySelectorAll(".showMore").forEach((e => {
+
+                        gsap.set(e.querySelector("a"), {
+
+                            y: '40px',
+                        }),
+                            gsap.to(e.querySelector("a"), {
+
+                                scrollTrigger: {
+                                    trigger: e,
+                                    start: "0 0",
+                                    end: "0 0",
+                                    containerAnimation: scrollTween,
+                                    scrub: true,
+
+                                },
+
+                                y: '0',
+                                duration: 3,
+                                ease: "power3.out",
+
+                            })
+
+                    })),
+
+                        document.querySelectorAll(".Title").forEach((e => {
+
+                            gsap.set(e.querySelector("h5"), {
+
+                                y: '100%',
+                            }),
+                                gsap.to(e.querySelector("h5"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+                                        start: "0 0",
+                                        end: "0 0",
+                                        containerAnimation: scrollTween,
+                                        scrub: true,
+
+                                    },
+
+                                    y: '0',
+                                    duration: 3,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+
+                        document.querySelectorAll(".title").forEach((e => {
+
+                            gsap.set(e.querySelector("h4"), {
+
+                                y: '100%',
+                            }),
+
+
+
+                                gsap.to(e.querySelector("h4"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+
+                                        start: "top top",
+                                        end: "bottom bottom",
+                                        containerAnimation: scrollTween,
+                                        scrub: true,
+
+                                    },
+
+                                    y: '0',
+                                    duration: 3,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+
+                        document.querySelectorAll(".Title").forEach((e => {
+
+                            gsap.set(e.querySelector("h4"), {
+
+                                y: '100%',
+                            }),
+
+
+
+                                gsap.to(e.querySelector("h4"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+
+                                        start: "0 0",
+                                        end: "0 0",
+                                        containerAnimation: scrollTween,
+                                        scrub: true,
+
+                                    },
+
+                                    y: '0',
+                                    duration: 1,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+                        document.querySelectorAll(".Text").forEach((e => {
+
+                            gsap.set(e.querySelector("p"), {
+
+                                y: '100%',
+                            }),
+
+
+
+                                gsap.to(e.querySelector("p"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+
+                                        start: "0 0",
+                                        end: "0 0",
+                                        containerAnimation: scrollTween,
+                                        scrub: true,
+
+                                    },
+
+                                    y: '0',
+                                    duration: 1,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+
+
+                        document.querySelectorAll(".title").forEach((e => {
+                            gsap.set(e.querySelector("h3"), {
+
+                                y: '60px',
+                            }),
+                                gsap.to(e.querySelector("h3"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+
+                                        start: "top top",
+                                        end: "bottom bottom",
+                                        containerAnimation: scrollTween,
+                                        scrub: true,
+
+                                    },
+
+                                    y: '-15px',
+                                    duration: 3,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+
+                        document.querySelectorAll(".title").forEach((e => {
+                            gsap.set(e.querySelector("h2"), {
+
+                                y: '100%',
+                            }),
+                                gsap.to(e.querySelector("h2"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+
+                                        start: "0 0",
+                                        end: "0 0",
+                                        containerAnimation: scrollTween,
+                                        scrub: true,
+
+                                    },
+
+                                    y: '0',
+                                    duration: 3,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+                        document.querySelectorAll(".text").forEach((e => {
+                            gsap.set(e.querySelector("p"), {
+
+                                y: '100%',
+                            }),
+                                gsap.to(e.querySelector("p"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+
+                                        start: "0 0",
+                                        end: "0 0",
+                                        containerAnimation: scrollTween,
+                                        scrub: true,
+
+                                    },
+
+                                    y: '0',
+                                    duration: 3,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+
+
+
+                        document.querySelectorAll(".Project").forEach((e => {
+
+                            gsap.set(e.querySelector("img"), {
+
+                                y: '682px',
+                            }),
+                                gsap.to(e.querySelector("img"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+                                        containerAnimation: scrollTween,
+                                        start: "0 0",
+                                        end: "0 0",
+                                        scrub: 0.1
+
+                                    },
+
+                                    y: 0,
+                                    duration: 2,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+                        document.querySelectorAll(".Title").forEach((e => {
+
+                            gsap.set(e.querySelector("h3"), {
+
+                                y: '100%',
+                            }),
+                                gsap.to(e.querySelector("h3"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+                                        containerAnimation: scrollTween,
+                                        start: "0 0",
+                                        end: "0 0",
+                                        scrub: 0.1
+
+                                    },
+
+                                    y: 0,
+                                    duration: 2,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+                        document.querySelectorAll(".Blog").forEach((e => {
+
+                            gsap.set(e.querySelector("img"), {
+
+                                scale: '1.25',
+                            }),
+                                gsap.to(e.querySelector("img"), {
+
+                                    scrollTrigger: {
+                                        trigger: e,
+                                        containerAnimation: scrollTween,
+                                        start: "0 0",
+                                        end: "0 0",
+                                        scrub: true,
+
+                                    },
+
+                                    scale: '1',
+                                    duration: 2,
+                                    ease: "power3.out",
+
+                                })
+
+                        })),
+
+
+
+
+
+                        document.querySelectorAll(".clr").forEach((e => {
+                            gsap.set(e.querySelector(".bg"), {
+                                scale: 1.3
+                            }), gsap.to(e.querySelector(".bg"), {
+                                scrollTrigger: {
+                                    trigger: e,
+                                    containerAnimation: scrollTween,
+                                    start: "top top"
+                                },
+                                duration: 1,
+                                ease: "none",
+                                scale: 1
+                            })
+                        })),
+
+                        document.querySelectorAll(".bg1").forEach((e => {
+                            gsap.set(e, {
+                                scale: 1.3
+                            }), gsap.to(e, {
+                                scrollTrigger: {
+                                    trigger: ".Blog_Container",
+                                    containerAnimation: scrollTween,
+                                    start: "top top"
+                                },
+                                duration: 1,
+                                ease: "none",
+                                scale: 1
+                            })
+                        }))
+                    document.querySelectorAll(".bg2").forEach((e => {
+                        gsap.set(e, {
+                            scale: 1.3
+                        }), gsap.to(e, {
+                            scrollTrigger: {
+                                trigger: ".Blog_Container",
+                                containerAnimation: scrollTween,
+                                start: "top top"
+                            },
+                            duration: 1,
+                            ease: "none",
+                            scale: 1
+                        })
+                    }))
+                    document.querySelectorAll(".bg3").forEach((e => {
+                        gsap.set(e, {
+                            scale: 1.3
+                        }), gsap.to(e, {
+                            scrollTrigger: {
+                                trigger: ".Blog_Container",
+                                containerAnimation: scrollTween,
+                                start: "top top"
+                            },
+                            duration: 1,
+                            ease: "none",
+                            scale: 1
+                        })
+                    }))
+                }), 1e3)
+            }))
+        }));
+        let loadContainer = document.querySelector(".Load_Container");
+        gsap.set(loadContainer, {
+            opacity: 1
+        }), gsap.to(loadContainer, {
+            duration: .8,
+            delay: 5,
+            opacity: 0,
+            display: "none"
+        }), gsap.fromTo("#logo_group", 6, {
+            fill: "#C2CBC9"
+        }, {
+            fill: "#000"
+        }), gsap.fromTo("#logo_group1", 6, {
+            stroke: "#C2CBC9"
+        }, {
+            stroke: "#000"
+        }), setTimeout((() => {
+            new Swiper(".swiper-first", {
+                loop: !0,
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: !0
+                },
+                autoplay: {
+                    delay: 2600
+                },
+                speed: 2e3,
+                pagination: {
+                    el: ".Slider_Container .swiper-pagination",
+                    clickable: !0,
+                    type: "bullets",
+                    renderBullet: function (e, r) {
+                        return '<span class="' + r + '"><i class="fill"></i></span>'
+                    }
+                },
+                on: {
+                    transitionStart: function () { },
+                    transitionEnd: function () { }
+                }
+            })
+        }), 5e3);
+        let video = document.querySelector(".video video");
+        setTimeout((() => {
+            video.play(), video.setAttribute("autoplay", ""), console.log("start")
+        }), 5e3);
+
+
+
+
+
+
+
+
+        $(".container").imagesLoaded({}, (function () {
+            $(document).ready((function () {
+                setTimeout((() => {
+                    gsap.registerPlugin(ScrollTrigger);
+                    const e = document.querySelector(".container"),
+                        r = new LocomotiveScroll({
+                            el: e,
+                            direction: "horizontal",
+                            smooth: !0,
+                            lerp: .05
+                        });
+                    r.on("scroll", ScrollTrigger.update), ScrollTrigger
+                        .scrollerProxy(e, {
+                            scrollTop(e) {
+                                return arguments.length ? r.scrollTo(e, 0, 0) :
+                                    r.scroll.instance.scroll.y
+                            },
+                            getBoundingClientRect: () => ({
+                                left: 0,
+                                top: 0,
+                                width: window.innerWidth,
+                                height: window.innerHeight
+                            }),
+                            pinType: e.style.transform ? "transform" : "fixed"
+                        });
+                    document.querySelectorAll(".Pin-Wrapp > *");
+                    let t = document.querySelector(".Pin-Wrapp").offsetWidth,
+                        o = t - window.innerWidth;
+
+
+                    scrollTween = gsap.to(".Pin-Wrapp", {
+                        scrollTrigger: {
+                            scroller: e,
+                            scrub: !0,
+                            trigger: "#PinSection",
+                            pin: !0,
+                            lerp: .05,
+                            start: "top top",
+                            end: t
+                        },
+
+                        x: o,
+                        ease: "none"
+                    }), ScrollTrigger.addEventListener("refresh", (() => r
+                        .update())), ScrollTrigger.refresh(), r.update(), window
+                            .addEventListener("load", (function () {
+                                ScrollTrigger.addEventListener("refresh", (() =>
+                                    r.update())), ScrollTrigger.refresh(), r
+                                        .update()
+                            })), window.addEventListener("resize", (() => {
+                                ScrollTrigger.addEventListener("refresh", (() =>
+                                    r.update())), ScrollTrigger.refresh(), r
+                                        .update()
+                            }));
+                    document.querySelectorAll(".Filter-Menu a")
+                }), 1e3)
+            }))
+        }));
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
