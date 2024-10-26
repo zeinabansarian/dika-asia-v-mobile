@@ -1,11 +1,13 @@
 
 $(function() {
     $(window).on("scroll", function() {
-        if($(window).scrollTop() > 50) {
-            $("header").addClass("activeHeader");
-        } else {
-           $("header").removeClass("activeHeader");
-        }
+      var st = window.pageYOffset || document.documentElement.scrollTop; 
+      if (st == 0) {
+        $("header").removeClass("activeHeader"); 
+    }
+    else{
+      $("header").addClass("activeHeader");
+    }
     });
 });
 document.addEventListener("DOMContentLoaded", function() {

@@ -41,36 +41,22 @@ let SwiperBanner= new Swiper ('.swiper-Gallery', {
     prevEl: ".Section-1 .swiper-button-prev",
   }
     }) 
- 
-// tab btn
-$bc.setSource('db.btn1',true)
-$bc.setSource('db.btn2',false)
-let tabBtns = document.querySelectorAll('.Tab-Item')
-tabBtns[0].classList.add('active')
-tabBtns.forEach(btn=>{
-    btn.addEventListener('click',(e)=>{
-    for(let i =0 ; i <tabBtns.length ; i++){
-        tabBtns[i].classList.remove('active')
-    }
-    e.currentTarget.classList.add('active')
-    let ID = e.currentTarget.getAttribute('id')
-    switch(ID){
-        case 'tab-1':{
-            console.log('tab 1');
-            $bc.setSource('db.btn1',true)
-            $bc.setSource('db.btn2',false)
-            break
-            
-        }
-        case 'tab-2':{
-            console.log('tab 2');
-            $bc.setSource('db.btn1',false)
-            $bc.setSource('db.btn2',true)
-            break
-        }
-    }
-    })
-})
+    let imgSlides = document.querySelectorAll('.swiper-Gallery .swiper-slide')
+    let Bnext =document.querySelector('.Section-1 .swiper-button-next')
+    let Bprev =document.querySelector('.Section-1 .swiper-button-prev')
+
+   if(imgSlides.length == 1){
+    Bnext.style.display='none'
+    Bprev.style.display='none'
+    console.log('only1',imgSlides.length);
+    
+   }
+   else{
+    console.log('not i',imgSlides.length);
+     Bnext.style.display='flex'
+    Bprev.style.display='flex'
+   }
+
 // related product
 let SwiperProduct= new Swiper ('.swiper-RelatedProduct', {
     slidesPerView: 1.3,
@@ -80,7 +66,7 @@ let SwiperProduct= new Swiper ('.swiper-RelatedProduct', {
     })
 // related project
 let SwiperProject= new Swiper ('.swiper-RelatedProject', {
-    slidesPerView: 1.3,
+    slidesPerView: 1,
     spaceBetween: 30,
     effect:'slide' ,
    speed:2000
@@ -198,3 +184,34 @@ let SwiperProject= new Swiper ('.swiper-RelatedProject', {
         },1000)
         }
         
+        // tab btn
+$bc.setSource('db.btn1',true)
+$bc.setSource('db.btn2',false)
+let tabBtns = document.querySelectorAll('.Tab-Item')
+if(tabBtns[0]){
+  tabBtns[0].classList.add('active')
+}
+tabBtns.forEach(btn=>{
+    btn.addEventListener('click',(e)=>{
+    for(let i =0 ; i <tabBtns.length ; i++){
+        tabBtns[i].classList.remove('active')
+    }
+    e.currentTarget.classList.add('active')
+    let ID = e.currentTarget.getAttribute('id')
+    switch(ID){
+        case 'tab-1':{
+            console.log('tab 1');
+            $bc.setSource('db.btn1',true)
+            $bc.setSource('db.btn2',false)
+            break
+            
+        }
+        case 'tab-2':{
+            console.log('tab 2');
+            $bc.setSource('db.btn1',false)
+            $bc.setSource('db.btn2',true)
+            break
+        }
+    }
+    })
+})

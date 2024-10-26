@@ -13,7 +13,7 @@ window.addEventListener("scroll", function(){
         y:0,
         scrollTrigger:{
             trigger:pro,
-            start:'top 50%',
+            start:'top 70%',
             end:'bottom bottom',
             stagger:.3
         }

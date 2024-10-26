@@ -45,7 +45,7 @@
 <header class="MobileHeader fixed top-0 [&.goDown]:top-[-100%]
 ease-in [&.goTop]:top-0
  left-0 right-0 w-full z-[99] [&.activeHeader]:bg-bgGray hover:bg-bgGray duration-150
-flex justify-center items-center h-[10vh] group/header flex-col
+flex justify-center items-center h-[10vh] group/header flex-col [&.activeHeader]:border-b-Woodsmoke400
 hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]  " dir="rtl">
   <nav class="Header grid mx-auto  w-full h-full
    grid-cols-[2fr,1fr] justify-center items-center">
@@ -89,7 +89,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]
              group-hover/header:border-l-[1px]
              flex justify-center items-center ">
                 <div class="Toggles toggle-inner w-auto flex justify-center items-center gap-3 hover:cursor-pointer ">
-                    <div class="Toggles-Items w-[24px] flex flex-col gap-[3px]">
+                    <div class="Toggles-Items w-[24px] flex flex-col gap-[5px]">
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
@@ -125,7 +125,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]
 
     <div class="Left w-full flex justify-end items-center">
         <div class="Logo w-auto ml-[15%] flex justify-center items-center">
-            <a href="" class="w-auto">
+            <a href="/" alt="صفحه‌نخست" title="صفحه‌نخست" class="w-auto">
                 <svg width="89" height="42" viewBox="0 0 89 42" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect width="89" height="42" fill="url(#pattern0_981_226)"/>
                     <defs>
@@ -491,7 +491,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
                  <li class="Menu-item w-full flex justify-start items-start ">
  
                      <a href="محصولات" alt="محصولات" title="محصولات" class="menu-link w-auto flex gap-3 group/menu-link">
-                         <span class="num font-YekanBakh400 flex duration-150 group-hover/menu-link:text-punch600
+                         <span class="faNum num font-YekanBakh400 flex duration-150 group-hover/menu-link:text-punch600
                           justify-center items-center
                           font-normal text-base leading-28 text-Woodsmoke800">
                              01.
@@ -505,7 +505,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
                  </li>
                  <li class="Menu-item w-full flex justify-start items-start ">
                      <a href="ویدیوها" alt="ویدئو‌ها" title="ویدئو‌ها" class="menu-link w-auto flex gap-3 group/menu-link">
-                         <span class="num font-YekanBakh400 flex justify-center items-center
+                         <span class="faNum num font-YekanBakh400 flex justify-center items-center
                          font-normal text-base leading-28 text-Woodsmoke800 duration-150 group-hover/menu-link:text-punch600">
                              02.
                          </span>
@@ -518,7 +518,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
                  </li>
                  <li class="Menu-item w-full flex justify-start items-start ">
                      <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها " class="menu-link w-auto flex gap-3 group/menu-link">
-                         <span class="num font-YekanBakh400 flex justify-center items-center
+                         <span class="faNum num font-YekanBakh400 flex justify-center items-center
                          font-normal text-base leading-28 text-Woodsmoke800 duration-150 group-hover/menu-link:text-punch600">
                              03.
                          </span>
@@ -530,7 +530,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
                  </li>
                  <li class="Menu-item w-full flex justify-start items-start ">
                      <a href="مقالات"  alt="مقالات" title="مقالات" class="menu-link w-auto flex gap-3 group/menu-link">
-                         <span class="num font-YekanBakh400 flex justify-center items-center
+                         <span class="faNum num font-YekanBakh400 flex justify-center items-center
                          font-normal text-base leading-28 text-Woodsmoke800 duration-150 group-hover/menu-link:text-punch600">
                              04.
                          </span>
@@ -543,7 +543,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
                  </li>
                  <li class="Menu-item w-full flex justify-start items-start ">
                      <a href="تماس-با-ما" alt="تماس‌باما" title="تماس‌باما" class="menu-link w-auto flex gap-3 group/menu-link">
-                         <span class="num font-YekanBakh400 flex justify-center items-center
+                         <span class="faNum num font-YekanBakh400 flex justify-center items-center
                          font-normal text-base leading-28 text-Woodsmoke800 duration-150 group-hover/menu-link:text-punch600">
                              05.
                          </span>
@@ -556,7 +556,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
                  </li>
                  <li class="Menu-item w-full flex justify-start items-start ">
                      <a href="درباره-ما" alt="درباره‌ی‌ما" title="درباره‌ی‌ما"  class="menu-link w-auto flex gap-3 group/menu-link">
-                         <span class="num font-YekanBakh400 flex justify-center items-center
+                         <span class="faNum num font-YekanBakh400 flex justify-center items-center
                          font-normal text-base leading-28 text-Woodsmoke800 duration-150 group-hover/menu-link:text-punch600">
                              06.
                          </span>
@@ -570,19 +570,19 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
                      </a>
                  </li>
              </ul>
-             <div class="langs w-[91%] mr-auto flex gap-3 mt-[3em]">
+             <div class="langs w-[91%] mr-auto flex gap-3 mt-[1.5em]">
                  <span class="lang w-[50px] h-[50px] bg-Woodsmoke600 rounded-[5px] active [&.active]:bg-punch600
                   flex justify-center items-center border-Woodsmoke/50 border-[1px]">
                      <a href="#" class="w-full h-full  flex justify-center items-center
                      font-YekanBakh400 font-normal text-sm leading-24 text-Woodsmoke/50">
-                         fa
+                        FA
                      </a>
                  </span>
                  <span class="lang w-[50px] h-[50px] bg-Woodsmoke600 rounded-[5px] [&.active]:bg-punch600
                  flex justify-center items-center border-Woodsmoke/50 border-[1px]">
                     <a href="#" class="w-full h-full  flex justify-center items-center
                     font-YekanBakh400 font-normal text-sm leading-24 text-Woodsmoke/50">
-                        en
+                       EN
                     </a>
                 </span>
              </div>

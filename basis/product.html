@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" usedforid="[##cms.query.id##]" > 
-    <member request="navigationcat" type="tree" name="nav" postsql="select * from [db.nav] where Parentid=210198" />
+    <member request="navigationcat" type="tree" name="nav" postsql="select * from [db.nav] where Parentcatid not in (210198,210062)" />
  </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]"> 
     <member name="product" type="view"/> 
@@ -21,6 +21,9 @@
  </basis>
 <basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
     <member request="json-ld" type="scalar" name="fq" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]" > 
+    <member name="schema1" type="view" postsql="select * from [db.schema1] where TypeID not in (150,146,144,159,160,161,162)"/> 
 </basis>
 <!DOCTYPE html>
 <html lang="fa">
@@ -56,19 +59,26 @@
                             <layout>
                                 @child
                             </layout>
-                            <face filter="RowNumber=3">
+                            <face filter="RowNumber=1">
                         <a href="@link" title=" @title" alt="@title" class="w-auto flex justify-start
                          items-start font-YekanBakh700 font-bold text-lg leading-32.03 text-Woodsmoke400">
-                            پارتیشن‌ها
+                            @title
                             </a>
                             </face>
                         </basis>
-                        <span class="w-auto flex justify-start items-start 
-                        font-YekanBakh700 font-bold text-lg leading-32.3 text-blackTxt">
-                            >
-                        </span>
-                        <span class="proName w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
-                            [##db.title.Answer##]
+                 
+                       
+                        <span class=" w-auto flex justify-center items-center  gap-5
+                        font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
+                            <span class="w-auto flex justify-start items-start 
+                            font-YekanBakh700 font-bold text-lg leading-32.3 text-blackTxt">
+                                >
+                            </span>
+                            <span class="proName w-auto flex justify-start items-start 
+                            font-YekanBakh700 font-bold text-lg leading-32.3 text-blackTxt">
+                                [##db.title.Answer##]
+                            </span>
+                           
                         </span>
                     </div>
                     <div class="ProGallery relative w-full flex justify-center flex-col mt-[1em]">
@@ -81,7 +91,7 @@
                                     <face filter="ord=50">
                                 <div class="swiper-slide w-full flex justify-center items-center">
                                     <div class="IMG w-full  flex justify-center items-center">
-                                        <img src="@largeIMG" alt="[##db.title.Answer##]" title="[##db.title.Answer##] class=" w-full object-cover">
+                                        <img src="@largeIMG" alt="[##db.title.Answer##]" title="[##db.title.Answer##]" class=" w-full object-cover">
                                     </div>
                                 </div>
                              
@@ -133,27 +143,35 @@
                         </span>
                     </div>
                   <div class="Tab-Container w-full flex flex-col justify-start items-start gap-6 mt-[1.2em]">
-                    <div class="Tab-Title border-b-[1px] border-Woodsmoke400 py-[.8em] w-full flex justify-start items-start gap-[1.5em]">
-                        <span class="Tab-Item hover:cursor-pointer pt-[.5em]
-                        group/tab w-auto relative flex justify-start items-start "
-                        bc-triggers="click" id="tab-1" >
-                            <span class="Line w-0 group-hover/tab:w-full group-[&.active]/tab:w-full duration-700
-                             h-[2px] bg-punch600 absolute right-0 top-0"></span>
-                            <span class="Tit duration-100 group-hover/tab:text-blackTxt group-[&.active]/tab:text-blackTxt w-auto flex justify-start items-start font-YekanBakh700 font-bold text-lg leading-32.03 text-Woodsmoke400">
-                                ویژگی‌ها
+                    <basis core="print" datamembername="db.schema1">
+                        <layout>
+                            <div class="Tab-Title border-b-[1px] border-Woodsmoke400 py-[.8em] w-full flex justify-start items-start gap-[1.5em]">
+                              
+                                <!-- <span class="Tab-Item group/tab hover:cursor-pointer  pt-[.5em]
+                                w-auto relative flex justify-start items-start "
+                                bc-triggers="click" id="tab-2">
+                                <span class="Line w-0 group-hover/tab:w-full group-[&.active]/tab:w-full duration-700
+                                     h-[2px] bg-punch600 absolute right-0 top-0"></span>
+                                     <span class="Tit duration-100 group-hover/tab:text-blackTxt group-[&.active]/tab:text-blackTxt w-auto flex justify-start items-start font-YekanBakh700 font-bold text-lg leading-32.03 text-Woodsmoke400">
+                                        ویژگی‌ها
+                                    </span>
+                                </span> -->
+                            </div>
+                        </layout>
+                        <face filter="RowNumber=1">
+                            <span class="Tab-Item hover:cursor-pointer pt-[.5em]
+                            group/tab w-auto relative flex justify-start items-start "
+                            bc-triggers="click" id="tab-1" >
+                                <span class="Line w-0 group-hover/tab:w-full group-[&.active]/tab:w-full duration-700
+                                 h-[2px] bg-punch600 absolute right-0 top-0"></span>
+                                <span class="Tit duration-100 group-hover/tab:text-blackTxt group-[&.active]/tab:text-blackTxt w-auto flex justify-start items-start font-YekanBakh700 font-bold text-lg leading-32.03 text-Woodsmoke400">
+                                    ویژگی‌ها
+                                </span>
+                                
                             </span>
-                            
-                        </span>
-                        <!-- <span class="Tab-Item group/tab hover:cursor-pointer  pt-[.5em]
-                        w-auto relative flex justify-start items-start "
-                        bc-triggers="click" id="tab-2">
-                        <span class="Line w-0 group-hover/tab:w-full group-[&.active]/tab:w-full duration-700
-                             h-[2px] bg-punch600 absolute right-0 top-0"></span>
-                             <span class="Tit duration-100 group-hover/tab:text-blackTxt group-[&.active]/tab:text-blackTxt w-auto flex justify-start items-start font-YekanBakh700 font-bold text-lg leading-32.03 text-Woodsmoke400">
-                                ویژگی‌ها
-                            </span>
-                        </span> -->
-                    </div>
+                        </face>
+                    </basis>
+             
                     <div class="Tab-Desc w-full flex justify-start items-start">
 
                     <basis core="group" if="{##db.btn1.value|(true)##}" run="atclient" triggers="db.btn1">
@@ -164,6 +182,7 @@
                                     @child
                                 </layout>
                                 <face filter="TypeID not in (150,146,144,159,160,161,162)">
+                                    <script type="text/template">
                             <div class="row w-full flex justify-start items-start gap-4">
                                 <span class="Question w-auto flex text-lg leading-32 text-blackTxt
                                 justify-center items-center font-YekanBakh700 font-bold">
@@ -174,6 +193,7 @@
                                 @Answer@
                                 </span>
                             </div>
+                        </script>
                                 </face>
                             </basis>
                             
