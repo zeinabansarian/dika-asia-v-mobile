@@ -40,11 +40,33 @@ headerItems.forEach(item=>{
     })
     })
 })
+let isopen = false
+let h= false
 toggle.addEventListener('click',()=>{
-    toggleMenu.classList.toggle('openMenu')
-    toggle.classList.toggle('openMenu')
+  if(!isopen){
+    if(header.classList.contains('activeHeader')){
+      console.log('has activeheader');
+      h = true
+    }
+    toggleMenu.classList.add('openMenu')
+    toggle.classList.add('openMenu')
     header.classList.add('activeHeader')
-    document.querySelector('.toggle-menu').classList.toggle('active')
+    document.querySelector('.toggle-menu').classList.add('active')
+    isopen = true
+    // lenis.stop()
+  }
+else{
+  toggleMenu.classList.remove('openMenu')
+  toggle.classList.remove('openMenu')
+  header.classList.remove('activeHeader')
+  document.querySelector('.toggle-menu').classList.remove('active')
+  if(!has){
+    header.classList.remove('activeHeader')
+    h = false
+  }
+  isopen = false
+  // lenis.start()
+}
 })
 
 
@@ -160,44 +182,110 @@ function switchScroll() {
   requestAnimationFrame(raf)
 
   // search popup
-
+let sIs = false
+let has = false
   searchPBTN.addEventListener('click',()=>{
-    console.log(searchP);
-    closeSBTN.classList.toggle('show')
-    searchIcon2.classList.toggle('show')
-    searchP.classList.toggle('openSearch')
-    header.classList.toggle('activeHeader')
-    let innerBtn = document.querySelector('.SearchIcon-1')
-    innerBtn.addEventListener('click',()=>{
-      let input = document.querySelector('.Search-popup input#inputHeader')
-      console.log('val',input.value);
-      if(input.value == ''){
-          return
-           }
-         else{
-             console.log('val',input.value);
-             setTimeout(()=>{
-            window.location.href = `/search.bc?q=${input.value}`
-             },1000)}
-             input.addEventListener("keypress", function(event) {
-              // If the user presses the "Enter" key on the keyboard
-              if (event.key === "Enter") {
-                // Cancel the default action, if needed
-                if(input.value != ''){
-                  event.preventDefault();
-                console.log('clicked');
-            console.log('val',input );
-            console.log('val',input.value);
+  
+    if(!sIs){
+      if(header.classList.contains('activeHeader')){
+        has = true
+        console.log(searchP);
+        closeSBTN.classList.add('show')
+        searchIcon2.classList.add('show')
+        searchP.classList.add('openSearch')
+        header.classList.add('activeHeader')
+        let innerBtn = document.querySelector('.SearchIcon-1')
+        innerBtn.addEventListener('click',()=>{
+          let input = document.querySelector('.Search-popup input#inputHeader')
+          console.log('val',input.value);
+          if(input.value == ''){
+              return
+               }
+             else{
+                 console.log('val',input.value);
+                 setTimeout(()=>{
+                window.location.href = `/search.bc?q=${input.value}`
+                 },1000)}
+                 input.addEventListener("keypress", function(event) {
+                  // If the user presses the "Enter" key on the keyboard
+                  if (event.key === "Enter") {
+                    // Cancel the default action, if needed
+                    if(input.value != ''){
+                      event.preventDefault();
+                    console.log('clicked');
+                console.log('val',input );
+                console.log('val',input.value);
+                  window.location.href = `/search.bc?q=${input.value}`
+                setTimeout(() => {
+                 
+                }, 1000);
+                    }
+                
+                
+                  }
+                })
+        })
+        sIs = true
+      }
+      console.log(searchP);
+      closeSBTN.classList.add('show')
+      searchIcon2.classList.add('show')
+      searchP.classList.add('openSearch')
+      header.classList.add('activeHeader')
+      let innerBtn = document.querySelector('.SearchIcon-1')
+      innerBtn.addEventListener('click',()=>{
+        let input = document.querySelector('.Search-popup input#inputHeader')
+        console.log('val',input.value);
+        if(input.value == ''){
+            return
+             }
+           else{
+               console.log('val',input.value);
+               setTimeout(()=>{
               window.location.href = `/search.bc?q=${input.value}`
-            setTimeout(() => {
-             
-            }, 1000);
+               },1000)}
+               input.addEventListener("keypress", function(event) {
+                // If the user presses the "Enter" key on the keyboard
+                if (event.key === "Enter") {
+                  // Cancel the default action, if needed
+                  if(input.value != ''){
+                    event.preventDefault();
+                  console.log('clicked');
+              console.log('val',input );
+              console.log('val',input.value);
+                window.location.href = `/search.bc?q=${input.value}`
+              setTimeout(() => {
+               
+              }, 1000);
+                  }
+              
+              
                 }
-            
-            
-              }
-            })
-    })
+              })
+      })
+      sIs = true
+    }
+    else{
+      if(has){
+        console.log('has activeheader');
+        closeSBTN.classList.remove('show')
+        searchIcon2.classList.remove('show')
+        searchP.classList.remove('openSearch')
+        has = false
+        sIs = false
+      }
+      else{
+        console.log('has not activeheader');
+        header.classList.remove('activeHeader')
+        closeSBTN.classList.remove('show')
+        searchIcon2.classList.remove('show')
+        searchP.classList.remove('openSearch')
+        has = true
+      }
+  
+      sIs = false
+    }
+
   
   })
 

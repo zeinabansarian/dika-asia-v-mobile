@@ -44,9 +44,9 @@
 </basis>
 <header class="MobileHeader fixed top-0 [&.goDown]:top-[-100%]
 ease-in [&.goTop]:top-0
- left-0 right-0 w-full z-[99] [&.activeHeader]:bg-bgGray hover:bg-bgGray duration-150
+ left-0 right-0 w-full z-[99] [&.activeHeader]:bg-bgGray duration-150
 flex justify-center items-center h-[10vh] group/header flex-col [&.activeHeader]:border-b-Woodsmoke400
-hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]  " dir="rtl">
+ [&.activeHeader]:border-b-[1px]  " dir="rtl">
   <nav class="Header grid mx-auto  w-full h-full
    grid-cols-[2fr,1fr] justify-center items-center">
     <div class="Right w-full flex h-full justify-start items-center ">
@@ -58,10 +58,10 @@ hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]
               before:duration-150 hover:before:w-full
               before:mx-auto before:left-0 before:right-0
              before:absolute before:top-0  
-            duration-150 group-hover/header:border-r-Woodsmoke400 group-[&.activeHeader]/header:border-r-Woodsmoke400
-            group-hover/header:border-r-[1px] group-[&.activeHeader]/header:border-r-[1px]
-            group-hover/header:border-l-Woodsmoke400 group-[&.activeHeader]/header:border-l-Woodsmoke400
-             group-hover/header:border-l-[1px] group-[&.activeHeader]/header:border-l-[1px]
+            duration-150 group-[&.activeHeader]/header:border-r-Woodsmoke400
+          group-[&.activeHeader]/header:border-r-[1px]
+            group-[&.activeHeader]/header:border-l-Woodsmoke400
+            group-[&.activeHeader]/header:border-l-[1px]
              searchIconHeader flex justify-center items-center hover:cursor-pointer
             ">
             <span class="absolute h-full [&.show]:opacity-[1] opacity-0 duration-75 pointer-events-none [&.show]:pointer-events-auto
@@ -85,8 +85,6 @@ hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]
             before:absolute before:top-0 
             group-[&.activeHeader]/header:border-l-Woodsmoke400
             group-[&.activeHeader]/header:border-l-[1px]
-            group-hover/header:border-l-Woodsmoke400
-             group-hover/header:border-l-[1px]
              flex justify-center items-center ">
                 <div class="Toggles toggle-inner w-auto flex justify-center items-center gap-3 hover:cursor-pointer ">
                     <div class="Toggles-Items w-[24px] flex flex-col gap-[5px]">
@@ -94,7 +92,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
                     </div>
-                   <div class="Toggles-Text  duration-150 group-hover/header:text-Woodsmoke800
+                   <div class="Toggles-Text  duration-150
                    w-auto flex justify-center text-base leading-28 text-Woodsmoke/50
                     items-center font-YekanBakh400 font-normal group-[&.activeHeader]/header:text-Woodsmoke800">
                     منو
@@ -108,12 +106,11 @@ hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px]
              before:duration-150 hover:before:w-full
              before:mx-auto before:left-0 before:right-0
             before:absolute before:top-0 
-            group-hover/header:border-l-Woodsmoke400
-             group-hover/header:border-l-[1px]
              group-[&.activeHeader]/header:border-l-Woodsmoke400
              group-[&.activeHeader]/header:border-l-[1px]
             flex justify-center items-center">
-                <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها"  class="Menu-Link  duration-150 w-auto group-hover/header:text-Woodsmoke800
+                <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها"  class="Menu-Link 
+                 duration-150 w-auto
                  flex justify-center text-base leading-28 text-Woodsmoke/50
                 items-center font-YekanBakh400 font-normal group-[&.activeHeader]/header:text-Woodsmoke800">
                     پروژه‌ها
@@ -210,7 +207,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
       <div class="Col  w-full flex flex-col justify-center items-center h-full">
          <div class="Inner-Menu w-full flex flex-col justify-center items-center h-full
           gap-[2em]">
-          <div class="Top-DropDowns overflow-y-scroll w-[91%] justify-start items-start mr-auto flex flex-col">
+          <div class="Top-DropDowns max-h-[30%] overflow-y-scroll w-[91%] justify-start items-start mr-auto flex flex-col">
             <div class="header-dropItem w-full flex justify-start items-start 
             flex-col">
                 <div class="Top-S group w-full mx-auto flex justify-start items-center pb-[.4em]

@@ -728,9 +728,6 @@ main.Home-Mobile .Banner-Slider .OV, main.ProductCat-Mobile .OV {
 header.activeHeader .Right .Item:nth-child(1) svg path{
   fill: #454545 !important;
   }
-  header:hover .Right .Item:nth-child(1) svg path{
-    fill: #454545 !important;
-  }
   main.Home-Mobile .Projects-C .IMG {
 position: relative;
 }
