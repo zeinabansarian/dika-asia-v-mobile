@@ -44,28 +44,41 @@ let isopen = false
 let h= false
 toggle.addEventListener('click',()=>{
   if(!isopen){
+    lenis.stop()
     if(header.classList.contains('activeHeader')){
-      console.log('has activeheader');
+      toggleMenu.classList.add('openMenu')
+      toggle.classList.add('openMenu')
+      header.classList.add('activeHeader')
+      document.querySelector('.toggle-menu').classList.add('active')
+      isopen = true
       h = true
     }
-    toggleMenu.classList.add('openMenu')
-    toggle.classList.add('openMenu')
-    header.classList.add('activeHeader')
-    document.querySelector('.toggle-menu').classList.add('active')
-    isopen = true
-    // lenis.stop()
+      toggleMenu.classList.add('openMenu')
+      toggle.classList.add('openMenu')
+      header.classList.add('activeHeader')
+      document.querySelector('.toggle-menu').classList.add('active')
+      isopen = true
   }
 else{
-  toggleMenu.classList.remove('openMenu')
+  lenis.start()
+  if(h){
+    console.log('has activeheader');
+    toggleMenu.classList.remove('openMenu')
+    toggle.classList.remove('openMenu')
+    header.classList.add('activeHeader')
+    document.querySelector('.toggle-menu').classList.remove('active')
+    h = false
+    isopen = false
+  }
+  else{
+    toggleMenu.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
   header.classList.remove('activeHeader')
   document.querySelector('.toggle-menu').classList.remove('active')
-  if(!has){
-    header.classList.remove('activeHeader')
-    h = false
+  h = true
   }
+
   isopen = false
-  // lenis.start()
 }
 })
 
@@ -342,3 +355,5 @@ else{
 })
 
 })
+let wrapp = document.querySelector('.Top-DropDowns')
+scrollbar = Scrollbar.init(wrapp);
